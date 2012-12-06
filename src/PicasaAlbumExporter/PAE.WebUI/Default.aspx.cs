@@ -19,6 +19,7 @@ namespace PAE.WebUI
 		{
 			if (!this.IsPostBack)
 			{
+				this.IncludePrivateCheckBox.Visible = false;
 				this.IncludePrivateCheckBox.Checked = false;
 				this.IncludePrivateCheckBox.Text = INCLUDE_PRIVATE_UNCHECKED_TEXT;
 				this.PasswordTextBox.Visible = false;
