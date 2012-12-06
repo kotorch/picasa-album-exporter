@@ -6,21 +6,33 @@
 	<title>Picasa Web Album Exporter</title>
 	<meta name="description" content="Export Google Picasa albums to HTML with Captions" />
 	<meta name="keywords" content="google,picasa,export,html,album,captions" />
+	
+	<style type="text/css">
+		
+		.paeTextArea
+		{
+			width: 650px;
+			max-width: 650px;
+			height: 100px;
+		}
+		
+	</style>
 </head>
 <body>
 	<form id="PaeForm" runat="server">
-	<div>
-		<h1 style="margin-left: 20px;">Picasa Web Album Exporter</h1>
-		<hr style="width: 800px; text-align: left;" />
+	<div style="padding-left: 140px; margin-bottom: 50px;">
+		<h1 style="margin-left: 10px;">Picasa Web Album Exporter</h1>
+		<br />
 		<ul style="color: Gray;">
-			<li>Export Google Picasa web albums as <b>HTML</b>, <b>XML</b>, <b>BBCode</b>, etc.</li>
+			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
 			<li>Export <b>unlisted</b> albums (with a password)</li>
 			<li>Choose desired image size</li>
 			<li>Include photo <b>captions</b>, <b>full-size</b> images</li>
 			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly preview exported HTML</li>
 		</ul>
-		<hr style="width: 800px; text-align: left;" />
+	</div>
+	<div>
 		<table width="800px" style="margin-top: 20px;">
 			<tbody>
 				<tr>
@@ -50,7 +62,7 @@
 				<tr>
 					<td>Photo template:</td>
 					<td>
-						<asp:TextBox ID="TemplateTextBox" runat="server" Width="99%" Height="100px"
+						<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
 				</tr>
@@ -73,7 +85,7 @@
 				<tr>
 					<td>Exported:</td>
 					<td>
-						<asp:TextBox ID="ResultTextBox" runat="server" Width="99%" Height="100px"
+						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
 				</tr>
