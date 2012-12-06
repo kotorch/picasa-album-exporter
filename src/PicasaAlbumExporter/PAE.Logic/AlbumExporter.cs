@@ -30,7 +30,7 @@ namespace PAE.Logic
 
 		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
 			+ "<p><a href=\"" + ORIGINAL_URL + "\" title=\"Увеличить\"><img src=\"" + PREVIEW_URL + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
-			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">Смотреть и комментировать на пикасе</a></i></sub></p>";
+			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">Это фото на пикасе</a></i></sub></p>";
 
 		#endregion
 
