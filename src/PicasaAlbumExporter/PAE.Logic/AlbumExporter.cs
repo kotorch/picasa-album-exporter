@@ -142,7 +142,7 @@ namespace PAE.Logic
 			return output;
 		}
 
-		private string GetPicasaUrl(PicasaEntry photo)
+		private string GetPhotoInfo(PicasaEntry photo)
 		{
 			string output = photo.GetPhotoExtensionValue(GPhotoNameTable.Size);
 		
