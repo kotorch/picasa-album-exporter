@@ -27,6 +27,7 @@ namespace PAE.Logic
 		private const string PREVIEW_URL = "<<PREVIEW-URL>>";
 		private const string PICASA_URL = "<<PICASA-URL>>";
 		private const string FILE_NAME = "<<FILE-NAME>>";
+		private const string COMPLETE_PHOTO_INFO = "<<COMPLETE-PHOTO-INFO>>";
 
 		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
 			+ "<p><a href=\"" + ORIGINAL_URL + "\" title=\"Увеличить\"><img src=\"" + PREVIEW_URL + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
@@ -57,7 +58,8 @@ namespace PAE.Logic
 				{ ORIGINAL_URL, (photo) => { return GetImageUrl(photo, FULL_SIZE); } },
 				{ PREVIEW_URL, (photo) => { return GetPreviewUrl(photo); } },
 				{ PICASA_URL, (photo) => { return GetPicasaUrl(photo); } },
-				{ FILE_NAME, (photo) => { return photo.Media.Title.Value; } }
+				{ FILE_NAME, (photo) => { return photo.Media.Title.Value; } },
+				{ COMPLETE_PHOTO_INFO, (photo) => { return GetPhotoInfo(photo); } }
 			};
 		}
 
@@ -137,6 +139,13 @@ namespace PAE.Logic
 				output = url.Insert(insertPosition, NOREDIRECT);
 			}
 
+			return output;
+		}
+
+		private string GetPicasaUrl(PicasaEntry photo)
+		{
+			string output = photo.GetPhotoExtensionValue(GPhotoNameTable.Size);
+		
 			return output;
 		}
 
