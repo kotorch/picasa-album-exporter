@@ -47,6 +47,15 @@
 					</td>
 				</tr>
 				<tr>
+					<td>Fit Preview Within:</td>
+					<td>
+						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" Text="1024"></asp:TextBox>
+						&nbsp;&nbsp;X&nbsp;&nbsp;
+						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" Text="768"></asp:TextBox>
+						&nbsp;&nbsp;Pixels
+					</td>
+				</tr>
+				<tr>
 					<td></td>
 					<td>
 						<asp:Button ID="ExportButton" runat="server" Text="Export" 

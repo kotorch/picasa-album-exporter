@@ -27,7 +27,7 @@ namespace PAE.Logic
 		private const string PREVIEW_URL = "<<PREVIEW-URL>>";
 		private const string PICASA_URL = "<<PICASA-URL>>";
 		private const string FILE_NAME = "<<FILE-NAME>>";
-		private const string COMPLETE_PHOTO_INFO = "<<COMPLETE-PHOTO-INFO>>";
+		private const string PHOTO_EXTENSIONS = "<<PHOTO-EXTENSIONS>>";
 
 		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
 			+ "<p><a href=\"" + ORIGINAL_URL + "\" title=\"Увеличить\"><img src=\"" + PREVIEW_URL + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
@@ -59,7 +59,7 @@ namespace PAE.Logic
 				{ PREVIEW_URL, (photo) => { return GetPreviewUrl(photo); } },
 				{ PICASA_URL, (photo) => { return GetPicasaUrl(photo); } },
 				{ FILE_NAME, (photo) => { return photo.Media.Title.Value; } },
-				{ COMPLETE_PHOTO_INFO, (photo) => { return GetPhotoInfo(photo); } }
+				{ PHOTO_EXTENSIONS, (photo) => { return GetPhotoExtensions(photo); } }
 			};
 		}
 
@@ -67,14 +67,14 @@ namespace PAE.Logic
 
 		#region Methods
 
-		public string ExportAlbum(string albumFeedUri, string template, int? previewMaxWidth, int? previewMaxHeight)
+		public string ExportAlbum(string albumFeedUri, string template, int previewMaxWidth, int previewMaxHeight)
 		{
 			PhotoQuery query = new PhotoQuery(albumFeedUri);
 			PicasaFeed feed = this.Service.Query(query);
 
 			photoCounter = 0;
-			this.previewWidth = previewMaxWidth.GetValueOrDefault(this.previewWidth);
-			this.previewHeight = previewMaxHeight.GetValueOrDefault(this.previewHeight);
+			this.previewWidth = previewMaxWidth;
+			this.previewHeight = previewMaxHeight;
 
 			StringBuilder result = new StringBuilder();
 
@@ -116,9 +116,13 @@ namespace PAE.Logic
 
 		private string GetPreviewUrl(PicasaEntry photo)
 		{
-			int contentWidth = int.Parse(photo.Media.Content.Width);
-			int contentHeight = int.Parse(photo.Media.Content.Height);
-			int size = (contentWidth > contentHeight) ? this.previewWidth : this.previewHeight;
+			int originalWidth = int.Parse(photo.GetPhotoExtensionValue(GPhotoNameTable.Width));
+			int originalHeight = int.Parse(photo.GetPhotoExtensionValue(GPhotoNameTable.Height));
+			
+			int size = originalWidth > originalHeight 
+					 ? Math.Min(this.previewWidth, originalWidth) 
+					 : Math.Min(this.previewHeight, originalHeight);
+				
 			string output = GetImageUrl(photo, size.ToString());
 
 			return output;
@@ -142,7 +146,7 @@ namespace PAE.Logic
 			return output;
 		}
 
-		private string GetPhotoInfo(PicasaEntry photo)
+		private string GetPhotoExtensions(PicasaEntry photo)
 		{
 			StringBuilder info = new StringBuilder();
 		

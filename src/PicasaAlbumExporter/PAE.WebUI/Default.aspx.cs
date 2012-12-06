@@ -70,13 +70,13 @@ namespace PAE.WebUI
 		{
 			try
 			{
+				string feedUri = this.AlbumDropDownList.SelectedValue;
+				string template = this.TemplateTextBox.Text;
+				int width = int.Parse(this.WidthTextBox.Text);
+				int height = int.Parse(this.HeightTextBox.Text);
+				
 				AlbumExporter provider = new AlbumExporter();
-				this.ResultTextBox.Text = provider.ExportAlbum
-													(
-														this.AlbumDropDownList.SelectedValue,
-														this.TemplateTextBox.Text,
-														null, null
-													);
+				this.ResultTextBox.Text = provider.ExportAlbum(feedUri, template, width, height);
 			}
 			catch (Exception ex)
 			{
