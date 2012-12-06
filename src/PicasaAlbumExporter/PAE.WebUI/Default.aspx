@@ -11,7 +11,7 @@
 		<table width="800px">
 			<tbody>
 				<tr>
-					<td style="width:130px;">Username or Email:</td>
+					<td style="width:140px;">Username or Email:</td>
 					<td>
 						<asp:TextBox ID="UsernameTextBox" runat="server" Width="99%"></asp:TextBox>
 					</td>
@@ -49,9 +49,9 @@
 				<tr>
 					<td>Fit Preview Within:</td>
 					<td>
-						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" Text="1024"></asp:TextBox>
-						&nbsp;&nbsp;X&nbsp;&nbsp;
-						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" Text="768"></asp:TextBox>
+						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;" Text="1024"></asp:TextBox>
+						&nbsp;&nbsp;x&nbsp;&nbsp;
+						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;" Text="768"></asp:TextBox>
 						&nbsp;&nbsp;Pixels
 					</td>
 				</tr>
