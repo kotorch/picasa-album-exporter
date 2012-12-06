@@ -4,24 +4,32 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<title>Picasa Web Album Exporter</title>
+	<meta name="description" content="Export Google Picasa albums to HTML with Captions" />
+	<meta name="keywords" content="google,picasa,export,html,album,captions" />
 </head>
 <body>
 	<form id="PaeForm" runat="server">
 	<div>
-		<table width="800px">
+		<h1 style="margin-left: 20px;">Picasa Web Album Exporter</h1>
+		<hr style="width: 800px; text-align: left;" />
+		<ul style="color: Gray;">
+			<li>Export Google Picasa web albums as <b>HTML</b>, <b>XML</b>, <b>BBCode</b>, etc.</li>
+			<li>Export <b>unlisted</b> albums (with a password)</li>
+			<li>Choose desired image size</li>
+			<li>Include photo <b>captions</b>, <b>full-size</b> images</li>
+			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
+			<li>Instantly preview exported HTML</li>
+		</ul>
+		<hr style="width: 800px; text-align: left;" />
+		<table width="800px" style="margin-top: 20px;">
 			<tbody>
 				<tr>
-					<td style="width:140px;">Username or Email:</td>
+					<td style="width:140px;">Username or email:</td>
 					<td>
-						<asp:TextBox ID="UsernameTextBox" runat="server" Width="99%"></asp:TextBox>
-					</td>
-				</tr>
-				<tr>
-					<td></td>
-					<td>
+						<asp:TextBox ID="UsernameTextBox" runat="server" Width="180px"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
 							OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />
-						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="200px">
+						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="180px">
 						</asp:TextBox>
 					</td>
 				</tr>
@@ -33,21 +41,21 @@
 					</td>
 				</tr>
 				<tr>
-					<td>Select Album:</td>
+					<td>Select album:</td>
 					<td>
 						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="99%">
 						</asp:DropDownList>
 					</td>
 				</tr>
 				<tr>
-					<td>Photo Template:</td>
+					<td>Photo template:</td>
 					<td>
 						<asp:TextBox ID="TemplateTextBox" runat="server" Width="99%" Height="100px"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
 				</tr>
 				<tr>
-					<td>Fit Preview Within:</td>
+					<td>Fit preview within:</td>
 					<td>
 						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
@@ -76,6 +84,14 @@
 							OnClick="PreviewButton_Click" />
 					</td>
 				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<asp:Label ID="MessageLabel" runat="server">
+						</asp:Label>
+					</td>
+				</tr>
+				
 			</tbody>
 		</table>
 	</div>

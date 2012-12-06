@@ -77,6 +77,24 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.TextBox TemplateTextBox;
         
         /// <summary>
+        /// WidthTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox WidthTextBox;
+        
+        /// <summary>
+        /// HeightTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox HeightTextBox;
+        
+        /// <summary>
         /// ExportButton control.
         /// </summary>
         /// <remarks>
@@ -104,6 +122,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Button PreviewButton;
         
         /// <summary>
+        /// MessageLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label MessageLabel;
+        
+        /// <summary>
         /// PreviewLiteral control.
         /// </summary>
         /// <remarks>
@@ -111,23 +138,5 @@ namespace PAE.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Literal PreviewLiteral;
-        
-        /// <summary>
-        /// WidthTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox WidthTextBox;
-        
-        /// <summary>
-        /// HeightTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox HeightTextBox;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using PAE.Logic;
 
@@ -9,8 +10,8 @@ namespace PAE.WebUI
 	{
 		#region Constants
 
-		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include Unlisted / Password:";
-		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include Unlisted";
+		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
+		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
 
 		#endregion
 
@@ -34,6 +35,7 @@ namespace PAE.WebUI
 			}
 			
 			this.ResultTextBox.Attributes["onfocus"] = "javascript:this.select();";
+			this.SetMessage(string.Empty, Color.Black);
 		}
 
 		protected void IncludePrivateCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -67,7 +69,7 @@ namespace PAE.WebUI
 			}
 			catch (Exception ex)
 			{
-				this.ResultTextBox.Text = ex.Message;
+				this.SetMessage(ex.Message, Color.Red);
 			}
 
 			if (albumsData != null && albumsData.Any())
@@ -101,13 +103,23 @@ namespace PAE.WebUI
 			}
 			catch (Exception ex)
 			{
-				this.ResultTextBox.Text = ex.Message;
+				this.SetMessage(ex.Message, Color.Red);
 			}
 		}
 
 		protected void PreviewButton_Click(object sender, EventArgs e)
 		{
 			this.PreviewLiteral.Text = this.ResultTextBox.Text;
+		}
+
+		#endregion
+
+		#region Implementation
+
+		private void SetMessage(string message, Color color)
+		{
+			this.MessageLabel.Text = message;
+			this.MessageLabel.ForeColor = color;
 		}
 
 		#endregion
