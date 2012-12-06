@@ -9,8 +9,8 @@ namespace PAE.WebUI
 	{
 		#region Constants
 
-		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include Private / Password:";
-		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include Private";
+		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include Unlisted / Password:";
+		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include Unlisted";
 
 		#endregion
 
