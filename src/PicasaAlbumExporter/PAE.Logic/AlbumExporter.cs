@@ -144,8 +144,15 @@ namespace PAE.Logic
 
 		private string GetPhotoInfo(PicasaEntry photo)
 		{
-			string output = photo.GetPhotoExtensionValue(GPhotoNameTable.Size);
+			StringBuilder info = new StringBuilder();
 		
+			foreach (var extension in photo.ExtensionElements)
+			{
+				info.AddLine(extension.ToString() + " = " + photo.GetPhotoExtensionValue(extension.ToString()));
+			}
+			
+			string output = info.ToString();
+			
 			return output;
 		}
 
