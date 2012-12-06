@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using PAE.Logic;
 
@@ -19,13 +20,14 @@ namespace PAE.WebUI
 		{
 			if (!this.IsPostBack)
 			{
-				this.IncludePrivateCheckBox.Visible = false;
 				this.IncludePrivateCheckBox.Checked = false;
 				this.IncludePrivateCheckBox.Text = INCLUDE_PRIVATE_UNCHECKED_TEXT;
 				this.PasswordTextBox.Visible = false;
 				this.PasswordTextBox.Text = string.Empty;
 				this.AlbumDropDownList.Enabled = false;
 				this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
+				this.WidthTextBox.Text = AlbumExporter.DEFALUT_PREVIEW_WIDTH.ToString();
+				this.HeightTextBox.Text = AlbumExporter.DEFALUT_PREVIEW_HEIGHT.ToString();
 			}
 		}
 
@@ -35,22 +37,34 @@ namespace PAE.WebUI
 			{
 				this.IncludePrivateCheckBox.Text = INCLUDE_PRIVATE_CHECKED_TEXT;
 				this.PasswordTextBox.Visible = true;
-				this.PasswordTextBox.Text = string.Empty;
 			}
 			else
 			{
 				this.IncludePrivateCheckBox.Text = INCLUDE_PRIVATE_UNCHECKED_TEXT;
 				this.PasswordTextBox.Visible = false;
-				this.PasswordTextBox.Text = string.Empty;
 			}
+
+			this.PasswordTextBox.Text = string.Empty;
 		}
 
 		protected void GetAlbumsButton_Click(object sender, EventArgs e)
 		{
-			AlbumSelector provider = new AlbumSelector();
-			var albumsData = provider.GetAlbums(this.UsernameTextBox.Text.Trim());
+			IEnumerable<AlbumInfo> albumsData = null;
 
-			if (albumsData.Any())
+			try
+			{
+				string username = this.UsernameTextBox.Text.Trim();
+				string password = this.PasswordTextBox.Text;
+			
+				AlbumSelector provider = new AlbumSelector();
+				albumsData = provider.GetAlbums(username, password);
+			}
+			catch (Exception ex)
+			{
+				this.ResultTextBox.Text = ex.Message;
+			}
+
+			if (albumsData != null && albumsData.Any())
 			{
 				this.AlbumDropDownList.Enabled = true;
 				this.AlbumDropDownList.DataTextField = "Title";

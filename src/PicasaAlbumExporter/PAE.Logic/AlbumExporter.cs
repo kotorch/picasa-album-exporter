@@ -29,6 +29,8 @@ namespace PAE.Logic
 		private const string FILE_NAME = "<<FILE-NAME>>";
 		private const string PHOTO_EXTENSIONS = "<<PHOTO-EXTENSIONS>>";
 
+		public const int DEFAULT_PREVIEW_WIDTH = 1024;
+		public const int DEFALUT_PREVIEW_HEIGHT = 768;
 		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
 			+ "<p><a href=\"" + ORIGINAL_URL + "\" title=\"Увеличить\"><img src=\"" + PREVIEW_URL + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
 			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">Это фото на пикасе</a></i></sub></p>";
@@ -42,8 +44,8 @@ namespace PAE.Logic
 		private Dictionary<string, ValueGetter> valueGetters;
 	
 		private int photoCounter = 0;
-		private int previewWidth = 1024;
-		private int previewHeight = 768;
+		private int previewWidth = DEFAULT_PREVIEW_WIDTH;
+		private int previewHeight = DEFALUT_PREVIEW_HEIGHT;
 
 		#endregion
 

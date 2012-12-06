@@ -19,8 +19,8 @@
 				<tr>
 					<td></td>
 					<td>
-						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server" Text="Include Private / Password:" 
-							OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" AutoPostBack="True" />
+						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
+							OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />
 						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="200px">
 						</asp:TextBox>
 					</td>
@@ -49,9 +49,9 @@
 				<tr>
 					<td>Fit Preview Within:</td>
 					<td>
-						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;" Text="1024"></asp:TextBox>
+						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
-						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;" Text="768"></asp:TextBox>
+						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;Pixels
 					</td>
 				</tr>
@@ -83,9 +83,6 @@
 	<div>
 		<asp:Literal ID="PreviewLiteral" runat="server" />
 	</div>
-	
-	<asp:HiddenField ID="SelectedAlbumHiddenField" runat="server" />
-	
 	</form>
 </body>
 </html>
