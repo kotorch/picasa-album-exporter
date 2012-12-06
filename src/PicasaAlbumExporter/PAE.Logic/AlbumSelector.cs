@@ -9,12 +9,17 @@ namespace PAE.Logic
 	{
 		#region Methods
 
-		public Collection<AlbumInfo> GetAlbums(string username)
+		public Collection<AlbumInfo> GetAlbums(string username, string password)
 		{
 			List<AlbumInfo> data = new List<AlbumInfo>();
 
 			if (!string.IsNullOrEmpty(username))
 			{
+				if (!string.IsNullOrEmpty(password))
+				{
+					this.Service.setUserCredentials(username, password);
+				}
+			
 				AlbumQuery query = new AlbumQuery(PicasaQuery.CreatePicasaUri(username));
 				PicasaFeed feed = this.Service.Query(query);
 

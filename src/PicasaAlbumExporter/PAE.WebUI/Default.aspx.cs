@@ -26,8 +26,8 @@ namespace PAE.WebUI
 				this.PasswordTextBox.Text = string.Empty;
 				this.AlbumDropDownList.Enabled = false;
 				this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
-				this.WidthTextBox.Text = AlbumExporter.DEFALUT_PREVIEW_WIDTH.ToString();
-				this.HeightTextBox.Text = AlbumExporter.DEFALUT_PREVIEW_HEIGHT.ToString();
+				this.WidthTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_WIDTH.ToString();
+				this.HeightTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_HEIGHT.ToString();
 			}
 		}
 
