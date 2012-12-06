@@ -116,12 +116,7 @@ namespace PAE.Logic
 		{
 			int contentWidth = int.Parse(photo.Media.Content.Width);
 			int contentHeight = int.Parse(photo.Media.Content.Height);
-
-			int size
-				= contentWidth > contentHeight 
-				? Math.Min(this.previewWidth, contentWidth)
-				: Math.Min(this.previewHeight, contentHeight);
-
+			int size = (contentWidth > contentHeight) ? this.previewWidth : this.previewHeight;
 			string output = GetImageUrl(photo, size.ToString());
 
 			return output;
