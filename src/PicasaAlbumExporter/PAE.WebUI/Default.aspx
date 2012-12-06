@@ -27,7 +27,7 @@
 			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
 			<li>Export <b>unlisted</b> albums (with a password)</li>
 			<li>Choose desired image size</li>
-			<li>Include photo <b>captions</b>, <b>full-size</b> images</li>
+			<li>Include photo <b>captions</b>, <b>full-size</b> images and other info</li>
 			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly preview exported HTML</li>
 		</ul>
