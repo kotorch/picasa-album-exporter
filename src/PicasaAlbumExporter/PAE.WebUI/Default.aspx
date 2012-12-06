@@ -6,7 +6,8 @@
 	<title>Picasa Web Album Exporter</title>
 	<meta name="description" content="Export Google Picasa albums to HTML with Captions" />
 	<meta name="keywords" content="google,picasa,export,html,album,captions" />
-	
+	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
+
 	<style type="text/css">
 		
 		.paeTextArea
