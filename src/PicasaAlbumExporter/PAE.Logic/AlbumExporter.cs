@@ -148,7 +148,7 @@ namespace PAE.Logic
 		
 			foreach (var extension in photo.ExtensionElements)
 			{
-				info.AppendLine(extension.ToString() + " = " + photo.GetPhotoExtensionValue(extension.ToString()));
+				info.AppendLine(extension.Text + " = " + photo.GetPhotoExtensionValue(extension.Value));
 			}
 			
 			string output = info.ToString();
