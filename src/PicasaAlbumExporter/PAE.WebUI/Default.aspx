@@ -52,7 +52,7 @@
 						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
 						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
-						&nbsp;&nbsp;Pixels
+						&nbsp;&nbsp;pixels
 					</td>
 				</tr>
 				<tr>

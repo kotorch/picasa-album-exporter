@@ -25,10 +25,15 @@ namespace PAE.WebUI
 				this.PasswordTextBox.Visible = false;
 				this.PasswordTextBox.Text = string.Empty;
 				this.AlbumDropDownList.Enabled = false;
+				
 				this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
 				this.WidthTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_WIDTH.ToString();
 				this.HeightTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_HEIGHT.ToString();
+				
+				this.UsernameTextBox.Focus();
 			}
+			
+			this.ResultTextBox.Attributes["onfocus"] = "javascript:this.select();";
 		}
 
 		protected void IncludePrivateCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -37,6 +42,7 @@ namespace PAE.WebUI
 			{
 				this.IncludePrivateCheckBox.Text = INCLUDE_PRIVATE_CHECKED_TEXT;
 				this.PasswordTextBox.Visible = true;
+				this.PasswordTextBox.Focus();
 			}
 			else
 			{
@@ -91,6 +97,7 @@ namespace PAE.WebUI
 				
 				AlbumExporter provider = new AlbumExporter();
 				this.ResultTextBox.Text = provider.ExportAlbum(feedUri, template, width, height);
+				this.ResultTextBox.Focus();				
 			}
 			catch (Exception ex)
 			{
