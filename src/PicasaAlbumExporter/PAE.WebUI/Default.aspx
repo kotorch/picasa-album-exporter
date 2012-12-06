@@ -60,8 +60,19 @@
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
 				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<asp:Button ID="PreviewButton" runat="server" Text="Preview" 
+							OnClick="PreviewButton_Click" />
+					</td>
+				</tr>
 			</tbody>
 		</table>
+	</div>
+	
+	<div>
+		<asp:Literal ID="PreviewLiteral" runat="server" />
 	</div>
 	
 	<asp:HiddenField ID="SelectedAlbumHiddenField" runat="server" />

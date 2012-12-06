@@ -84,6 +84,11 @@ namespace PAE.WebUI
 			}
 		}
 
+		protected void PreviewButton_Click(object sender, EventArgs e)
+		{
+			this.PreviewLiteral.Text = this.ResultTextBox.Text;
+		}
+
 		#endregion
 	}
 }

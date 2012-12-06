@@ -95,6 +95,24 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.TextBox ResultTextBox;
         
         /// <summary>
+        /// PreviewButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button PreviewButton;
+        
+        /// <summary>
+        /// PreviewLiteral control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal PreviewLiteral;
+        
+        /// <summary>
         /// SelectedAlbumHiddenField control.
         /// </summary>
         /// <remarks>
