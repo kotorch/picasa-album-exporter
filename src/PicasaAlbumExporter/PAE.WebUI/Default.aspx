@@ -23,8 +23,8 @@
 		
 		.paeTextArea
 		{
-			width: 545px;
-			max-width: 545px;
+			width: 565px;
+			max-width: 565px;
 			height: 100px;
 		}
 		
@@ -85,15 +85,15 @@
 		</ul>
 	</div>
 	<div>
-		<table width="1000px" cellspacing="7px">
+		<table width="1020px" cellspacing="7px">
 			<tbody>
 				<tr>
 					<td class="labelSection">Username:</td>
 					<td>
-						<asp:TextBox ID="UsernameTextBox" runat="server" Width="180px"></asp:TextBox>
+						<asp:TextBox ID="UsernameTextBox" runat="server" Width="160px"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
 							OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />
-						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="180px">
+						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="160px">
 						</asp:TextBox>
 					</td>
 					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username. Provide password for unlisted albums</td>
@@ -109,7 +109,7 @@
 				<tr>
 					<td class="labelSection">Select album:</td>
 					<td>
-						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="550px">
+						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="570px">
 						</asp:DropDownList>
 					</td>
 					<td class="helpSection"><b>3.</b> Choose album to export</td>
