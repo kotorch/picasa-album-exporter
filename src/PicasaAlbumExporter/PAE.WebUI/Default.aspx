@@ -94,7 +94,7 @@
 					<td>
 						<asp:Button ID="ResetTemplateButton" runat="server" Text="Reset Template" 
 							OnClick="ResetTemplateButton_Click" />
-						<asp:Literal ID="PlaceholdersLiteral" runat="server />
+						<asp:Literal ID="PlaceholdersLiteral" runat="server" />
 					</td>
 					<td class="helpSection"><b>4.</b></td>
 				</tr>
