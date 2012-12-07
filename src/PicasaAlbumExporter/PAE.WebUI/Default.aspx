@@ -108,7 +108,6 @@
 			</tbody>
 		</table>
 	</div>
-	
 	<div>
 		<asp:Literal ID="PreviewLiteral" runat="server" />
 	</div>
