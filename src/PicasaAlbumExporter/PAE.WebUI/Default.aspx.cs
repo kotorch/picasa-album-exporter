@@ -12,6 +12,7 @@ namespace PAE.WebUI
 
 		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
 		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
+		private const string PLACEHOLDER_BUTTON_FORMAT = "<input type=\"button\" name=\"btn_{0}\" id=\"btn_{0}\" value=\"{1}\" title=\"{2}\" />";
 
 		#endregion
 
@@ -34,6 +35,7 @@ namespace PAE.WebUI
 				this.UsernameTextBox.Focus();
 			}
 			
+			this.PlaceholdersLiteral.Text = this.BuildPlaceholdersHtml();
 			this.ResultTextBox.Attributes["onfocus"] = "javascript:this.select();";
 			this.SetMessage(string.Empty, Color.Black);
 		}
@@ -120,6 +122,25 @@ namespace PAE.WebUI
 		#endregion
 
 		#region Implementation
+		
+		private string BuildPlaceholdersHtml()
+		{
+			StringBuilder html = new StringBuilder();
+		
+			foreach(var placeholder in AlbumExporter.Placeholders)
+			{
+				string cleanName = placeholder.Key
+					.Replace("<", string.Empty)
+					.Replace(">", string.Empty)
+					.Replace("-", "_");
+					
+				html.AppendFormat(PLACEHOLDER_BUTTON_FORMAT, cleanName, placeholder.Key, placeholder.Value);
+			}
+			
+			string output = html.ToString();
+			
+			return output;
+		}
 
 		private void SetMessage(string message, Color color)
 		{

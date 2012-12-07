@@ -21,7 +21,7 @@ namespace PAE.Logic
 		private const string NEW_LINE = "\n";
 		private const string HTML_BREAK = "<br />";
 
-		public const string COUNTER = "<<COUNTER>>";
+		private const string COUNTER = "<<COUNTER>>";
 		private const string CAPTION = "<<CAPTION>>";
 		private const string ORIGINAL_URL = "<<ORIGINAL-URL>>";
 		private const string PREVIEW_URL = "<<PREVIEW-URL>>";
@@ -46,6 +46,16 @@ namespace PAE.Logic
 		private int photoCounter = 0;
 		private int previewWidth = DEFAULT_PREVIEW_WIDTH;
 		private int previewHeight = DEFAULT_PREVIEW_HEIGHT;
+
+		public static readonly IDictionary<string, string> Placeholders = new Dictionary<string, string>
+		{
+				{ COUNTER, "Sequential number of the photo in the album" },
+				{ CAPTION, "Photo caption" },
+				{ ORIGINAL_URL, "Original full-size image URL" },
+				{ PREVIEW_URL, "Resized according to your settings image URL" },
+				{ PICASA_URL, "URL to the Picasa page of the photo" },
+				{ FILE_NAME, "Original file name and with an extension" }
+		};
 
 		#endregion
 
