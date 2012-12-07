@@ -34,7 +34,7 @@
 			padding-left: 25px;
 			font-family: Calibri; 
 			font-size: normal;
-			color: Blue;
+			color: Navy;
 		}
 		
 	</style>
@@ -116,7 +116,7 @@
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
-					<td class="helpSection"><b>7.</b> Copy generated code and paste it in your blog</td>
+					<td class="helpSection"><b>7.</b> Copy generated code and paste it in your blog editor</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -124,7 +124,7 @@
 						<asp:Button ID="PreviewButton" runat="server" Text="Preview" 
 							OnClick="PreviewButton_Click" />
 					</td>
-					<td class="helpSection"><b>8.</b> Preview generated HTML</td>
+					<td class="helpSection"><b>8.</b> Render generated HTML</td>
 				</tr>
 				<tr>
 					<td></td>
