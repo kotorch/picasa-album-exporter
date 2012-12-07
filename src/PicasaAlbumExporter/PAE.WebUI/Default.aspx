@@ -47,7 +47,7 @@
 	
 	<script type="text/javascript">
 		
-		function InsertPlaceholder( placeholder )
+		function InsertPlaceholder( text )
 		{
 			var el = document.getElementById('<%= this.TemplateTextBox.ClientID %>');
 			var val = el.value, endIndex, range;
