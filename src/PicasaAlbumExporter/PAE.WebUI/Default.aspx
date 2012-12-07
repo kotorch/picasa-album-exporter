@@ -72,7 +72,7 @@
 </head>
 <body>
 	<form id="PaeForm" runat="server">
-	<div style="padding-left: 140px; margin-bottom: 50px;">
+	<div style="padding-left: 140px; margin-bottom: 40px;">
 		<h1 style="margin-left: 10px;">Picasa Web Album Exporter</h1>
 		<br />
 		<ul style="color: Gray;">
@@ -85,7 +85,7 @@
 		</ul>
 	</div>
 	<div>
-		<table width="1100px" cellspacing="10px">
+		<table width="1100px" cellspacing="7px">
 			<tbody>
 				<tr>
 					<td class="labelSection">Username:</td>
