@@ -53,8 +53,8 @@ namespace PAE.Logic
 				{ CAPTION, "Photo caption" },
 				{ ORIGINAL_URL, "Original full-size image URL" },
 				{ PREVIEW_URL, "Resized according to your settings image URL" },
-				{ PICASA_URL, "URL to the Picasa page of the photo" },
-				{ FILE_NAME, "Original file name and with an extension" }
+				{ PICASA_URL, "Link to the photo page on Picasa website" },
+				{ FILE_NAME, "Original file name with an extension" }
 		};
 
 		#endregion

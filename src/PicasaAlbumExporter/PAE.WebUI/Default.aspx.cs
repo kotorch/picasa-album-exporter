@@ -13,7 +13,7 @@ namespace PAE.WebUI
 
 		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
 		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
-		private const string PLACEHOLDER_BUTTON_FORMAT = "<input type=\"button\" name=\"btn_{0}\" id=\"btn_{0}\" value=\"{1}\" title=\"{2}\" />";
+		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{2}\" onclick=\"myFunction('{1}')\">{1}</button>";
 
 		#endregion
 
