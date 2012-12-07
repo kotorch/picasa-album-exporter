@@ -38,7 +38,7 @@
 		{
 			width: 300px;
 			padding-left: 25px;
-			font-family: Calibri; 
+			font-family: Arial; 
 			font-size: normal;
 			color: Navy;
 		}
