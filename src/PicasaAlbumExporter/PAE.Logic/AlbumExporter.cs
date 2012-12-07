@@ -49,12 +49,12 @@ namespace PAE.Logic
 
 		public static readonly IDictionary<string, string> Placeholders = new Dictionary<string, string>
 		{
-				{ COUNTER, "Sequential number of the photo in the album" },
 				{ CAPTION, "Photo caption" },
+				{ COUNTER, "Sequential number of the photo in the album" },
+				{ FILE_NAME, "Original file name with an extension" },
 				{ ORIGINAL_URL, "Original full-size image URL" },
-				{ PREVIEW_URL, "Resized according to your settings image URL" },
 				{ PICASA_URL, "Link to the photo page on Picasa website" },
-				{ FILE_NAME, "Original file name with an extension" }
+				{ PREVIEW_URL, "Resized according to your settings image URL" }
 		};
 
 		#endregion

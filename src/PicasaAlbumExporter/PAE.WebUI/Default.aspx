@@ -130,7 +130,7 @@
 					<td>
 						<asp:Literal ID="PlaceholdersLiteral" runat="server" />
 					</td>
-					<td class="helpSection"><b>5. Use placeholders to insert photo information into the template</b></td>
+					<td class="helpSection"><b>5.</b> Use placeholders to insert photo information into the template</td>
 				</tr>
 				<tr>
 					<td class="labelSection">Fit preview within:</td>
