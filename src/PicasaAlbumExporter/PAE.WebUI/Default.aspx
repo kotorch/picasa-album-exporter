@@ -52,7 +52,7 @@
 		{
 			font-size: normal !important;
 			font-weight: bold !important;
-			color: #CD5C5C !important;
+			color: #666666 !important;
 		}
 		
 	</style>
