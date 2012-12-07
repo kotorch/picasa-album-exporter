@@ -54,7 +54,7 @@
 		</ul>
 	</div>
 	<div>
-		<table width="1100px" cellspacing="10px" style="margin-top: 20px;">
+		<table width="1100px" cellspacing="10px">
 			<tbody>
 				<tr>
 					<td class="labelSection">Username:</td>
@@ -93,7 +93,7 @@
 				</tr>
 				<tr>
 					<td class="labelSection">Fit preview within:</td>
-					<td>
+					<td style="color: Gray;">
 						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
 						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
