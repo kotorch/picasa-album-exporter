@@ -101,7 +101,8 @@
 						<asp:TextBox ID="PasswordTextBox" runat="server" CssClass="credentialTextBox" ToolTip="Password" TextMode="Password">
 						</asp:TextBox>
 					</td>
-					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username; provide password for unlisted albums</td>
+					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username
+						<br />&nbps;&nbps;&nbps;Provide password for unlisted albums</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -179,8 +180,8 @@
 						</asp:Label>
 					</td>
 					<td class="helpSection">
-						<b>10.</b> Report problem, request feature, say Hi.<br />
-						<a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
+						<b>10.</b> Report problem, request feature, say hi
+						<br />&nbps;&nbps;&nbps;<a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
 					</td>
 				</tr>
 				
