@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Web;
 using PAE.Logic;
 
 namespace PAE.WebUI
@@ -13,7 +14,7 @@ namespace PAE.WebUI
 
 		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
 		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
-		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{2}\" onclick=\"myFunction('{1}')\">{1}</button>";
+		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{1}\" onclick=\"InsertPlaceholder('{2}')\">{3}</button>";
 
 		#endregion
 
@@ -134,8 +135,8 @@ namespace PAE.WebUI
 					.Replace("<", string.Empty)
 					.Replace(">", string.Empty)
 					.Replace("-", "_");
-					
-				html.AppendFormat(PLACEHOLDER_BUTTON_FORMAT, cleanName, placeholder.Key, placeholder.Value);
+				string htmlSafeKey = Server.HtmlEncode(placeholder.Key);
+				html.AppendFormat(PLACEHOLDER_BUTTON_FORMAT, cleanName, placeholder.Value, placeholder.Key, htmlSafeKey);
 			}
 			
 			string output = html.ToString();

@@ -44,6 +44,16 @@
 		}
 		
 	</style>
+	
+	<script type="text/javascript">
+		
+		function InsertPlaceholder( placeholder )
+		{
+			alert(placeholder);
+			// document.getElementById("demo").innerHTML="Hello World";
+		}
+		
+	</script>
 </head>
 <body>
 	<form id="PaeForm" runat="server">
