@@ -115,21 +115,22 @@
 					<td class="helpSection"><b>3.</b> Choose album to export</td>
 				</tr>
 				<tr>
-					<td class="labelSection"></td>
+					<td class="labelSection">Photo template:</td>
 					<td>
 						<asp:Button ID="ResetTemplateButton" runat="server" Text="Reset Template" 
 							OnClick="ResetTemplateButton_Click" />
-						<asp:Literal ID="PlaceholdersLiteral" runat="server" />
-					</td>
-					<td class="helpSection"><b>4.</b></td>
-				</tr>
-				<tr>
-					<td class="labelSection">Photo template:</td>
-					<td>
+						<br />
 						<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
-					<td class="helpSection"><b>5.</b> Specify the template that will be applied to each photo in the album or use default</td>
+					<td class="helpSection"><b>4.</b> Specify the template that will be applied to each photo in the album or use default</td>
+				</tr>
+				<tr>
+					<td class="labelSection">Placeholders:</td>
+					<td>
+						<asp:Literal ID="PlaceholdersLiteral" runat="server" />
+					</td>
+					<td class="helpSection"><b>5. Use placeholders to insert photo information into the template</b></td>
 				</tr>
 				<tr>
 					<td class="labelSection">Fit preview within:</td>
