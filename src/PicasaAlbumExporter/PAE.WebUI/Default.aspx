@@ -45,7 +45,12 @@
 			padding-left: 25px;
 			font-family: Arial; 
 			font-size: small;
-			color: Navy;
+			color: #4682B4;
+		}
+
+		.contactSection
+		{
+			color: #CD5C5C !important;
 		}
 		
 	</style>
@@ -102,7 +107,7 @@
 						</asp:TextBox>
 					</td>
 					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username
-						<br />&nbsp;&nbsp;&nbsp;Provide password for unlisted albums</td>
+						<br />&nbsp;&nbsp;&nbsp;&nbsp;Provide password for unlisted albums</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -179,9 +184,9 @@
 						<asp:Label ID="MessageLabel" runat="server">
 						</asp:Label>
 					</td>
-					<td class="helpSection">
-						<b>10.</b> Report problem, request feature, say hi
-						<br />&nbsp;&nbsp;&nbsp;<a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
+					<td class="helpSection contactSection">
+						Report problem, request feature, say hi
+						<br /><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
 					</td>
 				</tr>
 				
