@@ -102,7 +102,7 @@
 						</asp:TextBox>
 					</td>
 					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username
-						<br />&nbps;&nbps;&nbps;Provide password for unlisted albums</td>
+						<br />&nbsp;&nbsp;&nbsp;Provide password for unlisted albums</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -181,7 +181,7 @@
 					</td>
 					<td class="helpSection">
 						<b>10.</b> Report problem, request feature, say hi
-						<br />&nbps;&nbps;&nbps;<a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
+						<br />&nbsp;&nbsp;&nbsp;<a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
 					</td>
 				</tr>
 				
