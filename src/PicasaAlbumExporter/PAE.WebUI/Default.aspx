@@ -20,6 +20,11 @@
 			width: 140px;
 			color: Gray;
 		}
+
+		.credentialTextBox
+		{
+			width: 150px;
+		}
 		
 		.paeTextArea
 		{
@@ -90,10 +95,10 @@
 				<tr>
 					<td class="labelSection">Username:</td>
 					<td>
-						<asp:TextBox ID="UsernameTextBox" runat="server" Width="160px"></asp:TextBox>
+						<asp:TextBox ID="UsernameTextBox" runat="server" CssClass="credentialTextBox"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
 							OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />
-						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="160px">
+						<asp:TextBox ID="PasswordTextBox" runat="server" CssClass="credentialTextBox" ToolTip="Password" TextMode="Password">
 						</asp:TextBox>
 					</td>
 					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username. Provide password for unlisted albums</td>
