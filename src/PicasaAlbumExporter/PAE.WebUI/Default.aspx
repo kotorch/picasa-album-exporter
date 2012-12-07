@@ -28,8 +28,8 @@
 		
 		.paeTextArea
 		{
-			width: 600px;
-			max-width: 600px;
+			width: 605px;
+			max-width: 605px;
 			height: 100px;
 		}
 		
@@ -90,7 +90,7 @@
 		</ul>
 	</div>
 	<div>
-		<table width="1055px" cellspacing="7px">
+		<table width="1060px" cellspacing="7px">
 			<tbody>
 				<tr>
 					<td class="labelSection">Username:</td>
@@ -114,7 +114,7 @@
 				<tr>
 					<td class="labelSection">Select album:</td>
 					<td>
-						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="605px">
+						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="610px">
 						</asp:DropDownList>
 					</td>
 					<td class="helpSection"><b>3.</b> Choose album to export</td>
