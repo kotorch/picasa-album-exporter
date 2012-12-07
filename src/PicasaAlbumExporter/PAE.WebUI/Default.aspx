@@ -39,7 +39,7 @@
 			width: 300px;
 			padding-left: 25px;
 			font-family: Arial; 
-			font-size: normal;
+			font-size: small;
 			color: Navy;
 		}
 		
