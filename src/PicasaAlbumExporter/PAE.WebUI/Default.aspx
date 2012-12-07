@@ -28,6 +28,12 @@
 			height: 100px;
 		}
 		
+		.paeNumericTextBox
+		{
+			width: 50px;
+			text-align: right;
+		}
+		
 		.helpSection
 		{
 			width: 300px;
@@ -84,22 +90,31 @@
 					<td class="helpSection"><b>3.</b> Choose album to export</td>
 				</tr>
 				<tr>
+					<td class="labelSection"></td>
+					<td>
+						<asp:Button ID="ResetTemplateButton" runat="server" Text="Reset Template" 
+							OnClick="ResetTemplateButton_Click" />
+						<input type="button" name="CounterButton" value="<%= PAE.Logic.AlbumExporter.COUNTER %>" id="CounterButton" />
+					</td>
+					<td class="helpSection"><b>4.</b></td>
+				</tr>
+				<tr>
 					<td class="labelSection">Photo template:</td>
 					<td>
 						<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
-					<td class="helpSection"><b>4.</b> Specify the template that will be applied to each photo in the album or use default</td>
+					<td class="helpSection"><b>5.</b> Specify the template that will be applied to each photo in the album or use default</td>
 				</tr>
 				<tr>
 					<td class="labelSection">Fit preview within:</td>
 					<td style="color: Gray;">
-						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
+						<asp:TextBox ID="WidthTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
-						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
+						<asp:TextBox ID="HeightTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
 						&nbsp;&nbsp;pixels
 					</td>
-					<td class="helpSection"><b>5.</b> Set max width for landscape and height for 
+					<td class="helpSection"><b>6.</b> Set max width for landscape and height for 
 						portrait oriented images</td>
 				</tr>
 				<tr>
@@ -108,7 +123,7 @@
 						<asp:Button ID="ExportButton" runat="server" Text="Export" 
 							OnClick="ExportButton_Click" />
 					</td>
-					<td class="helpSection"><b>6.</b> Generate code using the template</td>
+					<td class="helpSection"><b>7.</b> Generate code using the template</td>
 				</tr>
 				<tr>
 					<td class="labelSection">Exported:</td>
@@ -116,7 +131,7 @@
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
-					<td class="helpSection"><b>7.</b> Copy generated code and paste it in your blog editor</td>
+					<td class="helpSection"><b>8.</b> Copy generated code and paste it in your blog editor</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -124,7 +139,7 @@
 						<asp:Button ID="PreviewButton" runat="server" Text="Preview" 
 							OnClick="PreviewButton_Click" />
 					</td>
-					<td class="helpSection"><b>8.</b> Render generated HTML</td>
+					<td class="helpSection"><b>9.</b> Render generated HTML</td>
 				</tr>
 				<tr>
 					<td></td>

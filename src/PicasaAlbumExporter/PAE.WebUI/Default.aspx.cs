@@ -88,6 +88,11 @@ namespace PAE.WebUI
 			}
 		}
 
+		protected void ResetTemplateButton_Click(object sender, EventArgs e)
+		{
+			this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
+		}
+
 		protected void ExportButton_Click(object sender, EventArgs e)
 		{
 			try

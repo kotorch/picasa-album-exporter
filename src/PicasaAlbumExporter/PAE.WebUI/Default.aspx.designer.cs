@@ -68,6 +68,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList AlbumDropDownList;
         
         /// <summary>
+        /// ResetTemplateButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button ResetTemplateButton;
+        
+        /// <summary>
         /// TemplateTextBox control.
         /// </summary>
         /// <remarks>

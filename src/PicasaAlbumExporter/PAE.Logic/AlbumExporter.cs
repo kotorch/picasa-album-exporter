@@ -21,7 +21,7 @@ namespace PAE.Logic
 		private const string NEW_LINE = "\n";
 		private const string HTML_BREAK = "<br />";
 
-		private const string COUNTER = "<<COUNTER>>";
+		public const string COUNTER = "<<COUNTER>>";
 		private const string CAPTION = "<<CAPTION>>";
 		private const string ORIGINAL_URL = "<<ORIGINAL-URL>>";
 		private const string PREVIEW_URL = "<<PREVIEW-URL>>";
