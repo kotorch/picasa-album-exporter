@@ -14,7 +14,7 @@ namespace PAE.WebUI
 
 		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
 		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
-		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{1}\" onclick=\"InsertPlaceholder('{2}')\">{3}</button>";
+		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{1}\" onclick=\"InsertPlaceholder('{2}'); return false;\">{3}</button>";
 
 		#endregion
 
@@ -137,6 +137,7 @@ namespace PAE.WebUI
 					.Replace("-", "_");
 				string htmlSafeKey = Server.HtmlEncode(placeholder.Key);
 				html.AppendFormat(PLACEHOLDER_BUTTON_FORMAT, cleanName, placeholder.Value, placeholder.Key, htmlSafeKey);
+				html.AppendLine();
 			}
 			
 			string output = html.ToString();
