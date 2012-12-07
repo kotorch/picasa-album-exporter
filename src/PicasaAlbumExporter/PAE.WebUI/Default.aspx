@@ -7,14 +7,34 @@
 	<meta name="description" content="Export Google Picasa albums to HTML with Captions" />
 	<meta name="keywords" content="google,picasa,export,html,album,captions" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
-
+	
 	<style type="text/css">
+		
+		h1
+		{
+			color: #666666;
+		}
+		
+		.labelSection
+		{
+			width: 140px;
+			color: Gray;
+		}
 		
 		.paeTextArea
 		{
-			width: 650px;
-			max-width: 650px;
+			width: 645px;
+			max-width: 645px;
 			height: 100px;
+		}
+		
+		.helpSection
+		{
+			width: 300px;
+			padding-left: 25px;
+			font-family: Calibri; 
+			font-size: normal;
+			color: Blue;
 		}
 		
 	</style>
@@ -34,10 +54,10 @@
 		</ul>
 	</div>
 	<div>
-		<table width="800px" style="margin-top: 20px;">
+		<table width="1100px" cellspacing="10px" style="margin-top: 20px;">
 			<tbody>
 				<tr>
-					<td style="width:140px;">Username or email:</td>
+					<td class="labelSection">Username:</td>
 					<td>
 						<asp:TextBox ID="UsernameTextBox" runat="server" Width="180px"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
@@ -45,6 +65,7 @@
 						<asp:TextBox ID="PasswordTextBox" runat="server" ToolTip="Password" TextMode="Password" Width="180px">
 						</asp:TextBox>
 					</td>
+					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username. Provide password for unlisted albums</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -52,29 +73,34 @@
 						<asp:Button ID="GetAlbumsButton" runat="server" Text="Get Albums" 
 							OnClick="GetAlbumsButton_Click" />
 					</td>
+					<td class="helpSection"><b>2.</b> Get list of albums</td>
 				</tr>
 				<tr>
-					<td>Select album:</td>
+					<td class="labelSection">Select album:</td>
 					<td>
-						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="99%">
+						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="650px">
 						</asp:DropDownList>
 					</td>
+					<td class="helpSection"><b>3.</b> Choose album to export</td>
 				</tr>
 				<tr>
-					<td>Photo template:</td>
+					<td class="labelSection">Photo template:</td>
 					<td>
 						<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
+					<td class="helpSection"><b>4.</b> Specify the template that will be applied to each photo in the album or use default</td>
 				</tr>
 				<tr>
-					<td>Fit preview within:</td>
+					<td class="labelSection">Fit preview within:</td>
 					<td>
 						<asp:TextBox ID="WidthTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;x&nbsp;&nbsp;
 						<asp:TextBox ID="HeightTextBox" runat="server" Width="50px" style="text-align: right;"></asp:TextBox>
 						&nbsp;&nbsp;pixels
 					</td>
+					<td class="helpSection"><b>5.</b> Set max width for landscape and height for 
+						portrait oriented images</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -82,13 +108,15 @@
 						<asp:Button ID="ExportButton" runat="server" Text="Export" 
 							OnClick="ExportButton_Click" />
 					</td>
+					<td class="helpSection"><b>6.</b> Generate code using the template</td>
 				</tr>
 				<tr>
-					<td>Exported:</td>
+					<td class="labelSection">Exported:</td>
 					<td>
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
+					<td class="helpSection"><b>7.</b> Copy generated code and paste it in your blog</td>
 				</tr>
 				<tr>
 					<td></td>
@@ -96,12 +124,16 @@
 						<asp:Button ID="PreviewButton" runat="server" Text="Preview" 
 							OnClick="PreviewButton_Click" />
 					</td>
+					<td class="helpSection"><b>8.</b> Preview generated HTML</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
 						<asp:Label ID="MessageLabel" runat="server">
 						</asp:Label>
+					</td>
+					<td>
+						
 					</td>
 				</tr>
 				
