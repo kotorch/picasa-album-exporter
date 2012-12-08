@@ -38,7 +38,7 @@
 			width: 150px;
 		}
 		
-		.mainButton
+		.mainButton1
 		{
 			font-size:20px;
 			color:#444444;
