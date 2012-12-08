@@ -19,12 +19,12 @@
 		.headerSection h1
 		{
 			color: #666666;
-		}
-		
-		.headerSection h3
-		{
-			color: #888888;
 			margin-left: 10px;
+		}
+			
+		.headerSection h1 sup
+		{
+			color:#aaaaaa;
 		}
 		
 		.headerSection ul
@@ -153,7 +153,7 @@
 <body>
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
-		<h3>&alpha;</h3>&nbsp;<h1>Picasa Web Album Exporter</h1>
+		<h1>Picasa Web Album Exporter<sup>&alpha;</sup></h1>
 		<br />
 		<ul>
 			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
