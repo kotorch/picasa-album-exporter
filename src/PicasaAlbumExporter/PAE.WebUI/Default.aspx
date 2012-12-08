@@ -25,7 +25,7 @@
 		.headerSection h1 sup
 		{
 			color:#cccccc;
-			font-size: small !important;
+			font-size: normal !important;
 		}
 		
 		.headerSection ul
@@ -154,7 +154,7 @@
 <body>
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
-		<h1>Picasa Web Album Exporter<sup>&alpha;</sup></h1>
+		<h1>Picasa Web Album Exporter<sup>&nbsp;&alpha;</sup></h1>
 		<br />
 		<ul>
 			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
