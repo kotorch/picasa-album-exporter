@@ -7,6 +7,7 @@
 	<meta name="description" content="Export Google Picasa albums to HTML, BBCode, XML, etc. Include photo captions, custom size images and other information." />
 	<meta name="keywords" content="google,picasa,export,to,html,album,captions,photos,images" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	
 	<style type="text/css">
 		
@@ -254,5 +255,7 @@
 		<asp:Literal ID="PreviewLiteral" runat="server" />
 	</div>
 	</form>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
