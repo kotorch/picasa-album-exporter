@@ -12,9 +12,12 @@ namespace PAE.WebUI
 	{
 		#region Constants
 
+		private const string HIDE_EDITOR_CSS = "hide";
+		private const string SHOW_EDITOR_CSS = "show";
 		private const string INCLUDE_PRIVATE_CHECKED_TEXT = "Include unlisted albums / Password:";
 		private const string INCLUDE_PRIVATE_UNCHECKED_TEXT = "Include unlisted albums";
-		private const string PLACEHOLDER_BUTTON_FORMAT = "<button id=\"btn_{0}\" title=\"{1}\" onclick=\"InsertPlaceholder('{2}'); return false;\">{3}</button>";
+		private const string PLACEHOLDER_BUTTON_FORMAT = "<button class=\"placeholderButton\" id=\"btn_{0}\" title=\"{1}\"" 
+													   + " onclick=\"InsertPlaceholder('{2}'); return false;\">{3}</button>";
 
 		#endregion
 
@@ -29,7 +32,8 @@ namespace PAE.WebUI
 				this.PasswordTextBox.Visible = false;
 				this.PasswordTextBox.Text = string.Empty;
 				this.AlbumDropDownList.Enabled = false;
-				
+
+				this.TemplateEditorPanel.CssClass = HIDE_EDITOR_CSS;
 				this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
 				this.WidthTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_WIDTH.ToString();
 				this.HeightTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_HEIGHT.ToString();
@@ -92,6 +96,11 @@ namespace PAE.WebUI
 			}
 		}
 
+		protected void ToggleEditorLink_Click(object sender, EventArgs e)
+		{
+			this.ToggleTemplateEditor();
+		}
+
 		protected void ResetTemplateButton_Click(object sender, EventArgs e)
 		{
 			this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
@@ -124,7 +133,21 @@ namespace PAE.WebUI
 		#endregion
 
 		#region Implementation
-		
+
+		private void ToggleTemplateEditor()
+		{
+			if (this.TemplateEditorPanel.CssClass == HIDE_EDITOR_CSS)
+			{
+				this.TemplateEditorPanel.CssClass = SHOW_EDITOR_CSS;
+				this.ToggleEditorLink.Text = "Hide template editor";
+			}
+			else
+			{
+				this.TemplateEditorPanel.CssClass = HIDE_EDITOR_CSS;
+				this.ToggleEditorLink.Text = "Edit template...";
+			}
+		}
+
 		private string BuildPlaceholdersHtml()
 		{
 			StringBuilder html = new StringBuilder();

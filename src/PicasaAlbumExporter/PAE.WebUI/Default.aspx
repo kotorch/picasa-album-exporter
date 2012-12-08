@@ -26,11 +26,57 @@
 			width: 150px;
 		}
 		
+		.mainButton
+		{
+			font-size: large;
+			font-weight: bold;
+			width: 140px;
+			height: 40px;
+		}
+		
+		.show
+		{
+			display: block;
+		}
+		
+		.hide
+		{
+			display: none;
+		}
+		
+		.placeholders
+		{
+			float: left;
+			width: 70%;
+		}
+		
+		.placeholders .placeholderButton
+		{
+			margin: 2px;
+			width: 100px;
+			font-size: xx-small;
+			background: #e0e0e0;
+			border: 1px solid black;
+		}
+		
+		.undoChanges
+		{
+			float: right;
+			margin: 2px;
+		}
+			
+		.imageSizeSection
+		{
+			clear: both;
+			padding-top: 7px;
+		}
+		
 		.paeTextArea
 		{
 			width: 605px;
 			max-width: 605px;
 			height: 100px;
+			margin-bottom: 7px;
 		}
 		
 		.paeNumericTextBox
@@ -39,20 +85,10 @@
 			text-align: right;
 		}
 		
-		.helpSection
-		{
-			width: 300px;
-			padding-left: 25px;
-			font-family: Arial; 
-			font-size: small;
-			color: #4682B4;
-		}
-
 		.contactSection
 		{
-			font-size: normal !important;
-			font-weight: bold !important;
-			color: #666666 !important;
+			padding: 30px 0 0 140px;
+			font-weight: bold;
 		}
 		
 	</style>
@@ -97,7 +133,7 @@
 		</ul>
 	</div>
 	<div>
-		<table width="1060px" cellspacing="7px">
+		<table width="760px" cellspacing="7px">
 			<tbody>
 				<tr>
 					<td class="labelSection">Username:</td>
@@ -108,16 +144,13 @@
 						<asp:TextBox ID="PasswordTextBox" runat="server" CssClass="credentialTextBox" ToolTip="Password" TextMode="Password">
 						</asp:TextBox>
 					</td>
-					<td class="helpSection"><b>1.</b> Enter any Google/Picasa username
-						<br />&nbsp;&nbsp;&nbsp;&nbsp;Provide password for unlisted albums</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<asp:Button ID="GetAlbumsButton" runat="server" Text="Get Albums" 
-							OnClick="GetAlbumsButton_Click" />
+						<asp:Button ID="GetAlbumsButton" runat="server" CssClass="mainButton"
+							Text="Get Albums" OnClick="GetAlbumsButton_Click" />
 					</td>
-					<td class="helpSection"><b>2.</b> Get list of albums</td>
 				</tr>
 				<tr>
 					<td class="labelSection">Select album:</td>
@@ -125,44 +158,38 @@
 						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="610px">
 						</asp:DropDownList>
 					</td>
-					<td class="helpSection"><b>3.</b> Choose album to export</td>
-				</tr>
-				<tr>
-					<td class="labelSection">Photo template:</td>
-					<td>
-						<asp:Button ID="ResetTemplateButton" runat="server" Text="Reset Template" 
-							OnClick="ResetTemplateButton_Click" />
-						<br />
-						<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
-							TextMode="MultiLine"></asp:TextBox>
-					</td>
-					<td class="helpSection"><b>4.</b> Specify the template that will be applied to each photo in the album or use default</td>
-				</tr>
-				<tr>
-					<td class="labelSection">Placeholders:</td>
-					<td>
-						<asp:Literal ID="PlaceholdersLiteral" runat="server" />
-					</td>
-					<td class="helpSection"><b>5.</b> Use placeholders to insert photo information into the template</td>
-				</tr>
-				<tr>
-					<td class="labelSection">Fit preview within:</td>
-					<td style="color: Gray;">
-						<asp:TextBox ID="WidthTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
-						&nbsp;&nbsp;x&nbsp;&nbsp;
-						<asp:TextBox ID="HeightTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
-						&nbsp;&nbsp;pixels
-					</td>
-					<td class="helpSection"><b>6.</b> Set max width for landscape and height for 
-						portrait oriented images</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<asp:Button ID="ExportButton" runat="server" Text="Export" 
-							OnClick="ExportButton_Click" />
+						<asp:LinkButton ID="ToggleEditorLink" runat="server" Text="Edit template..."
+							OnClick="ToggleEditorLink_Click" />
+						<asp:Panel ID="TemplateEditorPanel" runat="server">
+							<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
+								TextMode="MultiLine"></asp:TextBox>
+							<div class="placeholders">
+								<asp:Literal ID="PlaceholdersLiteral" runat="server" />
+							</div>
+							<div class="undoChanges">
+								<asp:Button ID="ResetTemplateButton" runat="server"
+									Text="Undo Changes" OnClick="ResetTemplateButton_Click" />
+							</div>
+							<div class="imageSizeSection">
+								Fit image within&nbsp;&nbsp;
+								<asp:TextBox ID="WidthTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
+								&nbsp;&nbsp;x&nbsp;&nbsp;
+								<asp:TextBox ID="HeightTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
+								&nbsp;&nbsp;pixels
+							</div>
+						</asp:Panel>
 					</td>
-					<td class="helpSection"><b>7.</b> Generate code using the template</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<asp:Button ID="ExportButton" runat="server" CssClass="mainButton" 
+							Text="Export" OnClick="ExportButton_Click" />
+					</td>
 				</tr>
 				<tr>
 					<td class="labelSection">Exported:</td>
@@ -170,25 +197,19 @@
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
 					</td>
-					<td class="helpSection"><b>8.</b> Copy generated code and paste it in your blog editor</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
-						<asp:Button ID="PreviewButton" runat="server" Text="Preview" 
-							OnClick="PreviewButton_Click" />
+						<asp:Button ID="PreviewButton" runat="server" 
+							Text="Preview" OnClick="PreviewButton_Click" />
 					</td>
-					<td class="helpSection"><b>9.</b> Render generated HTML</td>
 				</tr>
 				<tr>
 					<td></td>
 					<td>
 						<asp:Label ID="MessageLabel" runat="server">
 						</asp:Label>
-					</td>
-					<td class="helpSection contactSection">
-						Report problem, request feature, say hi
-						<br /><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a>
 					</td>
 				</tr>
 				
@@ -197,6 +218,9 @@
 	</div>
 	<div>
 		<asp:Literal ID="PreviewLiteral" runat="server" />
+	</div>
+	<div class="contactSection">
+		Report problem, request feature, say hi: <a href="mailto:dusiadev@gmail.com?Subject=[PAE]">contact developer</a>.
 	</div>
 	</form>
 </body>
