@@ -24,7 +24,8 @@
 			
 		.headerSection h1 sup
 		{
-			color:#aaaaaa;
+			color:#cccccc;
+			font-size: small !important;
 		}
 		
 		.headerSection ul
