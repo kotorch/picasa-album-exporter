@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-	<title>Picasa Web Album Exporter</title>
+	<title>Picasa Web Album Exporter, Export Picasa Albums to HTML, Export Picasa Albums to XML</title>
 	<meta name="description" content="Export Google Picasa albums to HTML with Captions" />
 	<meta name="keywords" content="google,picasa,export,html,album,captions" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
