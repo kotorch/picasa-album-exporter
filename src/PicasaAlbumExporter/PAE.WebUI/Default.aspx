@@ -159,11 +159,11 @@
 		<br />
 		<ul>
 			<li>Export Picasa web albums as <b>HTML</b>, <b>XML</b>, <b>BBCode</b>, etc.</li>
-			<li>Export <b>unlisted</b> albums (with a password)</li>
+			<li>Export <b>unlisted albums</b> (with a password)</li>
 			<li>Create <b>your own HTML template</b> or use the default one</li>
 			<li>Set <b>any size</b> for landscape or portrait orientation</li>
 			<li>Include photo <b>captions</b>, <b>full-size</b> images and other info</li>
-			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
+			<li>Embed in <b>your blog</b> (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly <b>preview</b> exported HTML</li>
 			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
 		</ul>
