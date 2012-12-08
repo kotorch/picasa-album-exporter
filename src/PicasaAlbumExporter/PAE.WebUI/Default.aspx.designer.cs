@@ -149,13 +149,13 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.TextBox ResultTextBox;
         
         /// <summary>
-        /// PreviewButton control.
+        /// PreviewLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button PreviewButton;
+        protected global::System.Web.UI.WebControls.LinkButton PreviewLink;
         
         /// <summary>
         /// MessageLabel control.

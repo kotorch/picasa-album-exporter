@@ -10,9 +10,21 @@
 	
 	<style type="text/css">
 		
-		h1
+		.headerSection
+		{
+			padding-left: 140px; 
+			margin-bottom: 40px;
+		}
+			
+		.headerSection h1
 		{
 			color: #666666;
+			margin-left: 10px;
+		}
+		
+		.headerSection ul
+		{
+			color: Gray;
 		}
 		
 		.labelSection
@@ -38,6 +50,11 @@
 			border-style:solid;
 			border-color:#444444;
 			border-width:2px;
+		}
+		
+		.selectAlbum
+		{
+			width: 610px;
 		}
 		
 		.show
@@ -91,12 +108,6 @@
 			text-align: right;
 		}
 		
-		.contactSection
-		{
-			padding: 30px 0 0 140px;
-			font-weight: bold;
-		}
-		
 	</style>
 	
 	<script type="text/javascript">
@@ -126,23 +137,24 @@
 </head>
 <body>
 	<form id="PaeForm" runat="server">
-	<div style="padding-left: 140px; margin-bottom: 40px;">
-		<h1 style="margin-left: 10px;">Picasa Web Album Exporter</h1>
+	<div class="headerSection">
+		<h1>Picasa Web Album Exporter</h1>
 		<br />
-		<ul style="color: Gray;">
+		<ul>
 			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
 			<li>Export <b>unlisted</b> albums (with a password)</li>
 			<li>Choose desired image size</li>
 			<li>Include photo <b>captions</b>, <b>full-size</b> images and other info</li>
 			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
-			<li>Instantly preview exported HTML</li>
+			<li>Instantly <b>preview</b> exported HTML</li>
+			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
 		</ul>
 	</div>
 	<div>
 		<table width="760px" cellspacing="7px">
 			<tbody>
 				<tr>
-					<td class="labelSection">Username:</td>
+					<td class="labelSection">Enter username:</td>
 					<td>
 						<asp:TextBox ID="UsernameTextBox" runat="server" CssClass="credentialTextBox"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
@@ -161,7 +173,7 @@
 				<tr>
 					<td class="labelSection">Select album:</td>
 					<td>
-						<asp:DropDownList ID="AlbumDropDownList" runat="server" Width="610px">
+						<asp:DropDownList ID="AlbumDropDownList" runat="server" CssClass="selectAlbum">
 						</asp:DropDownList>
 					</td>
 				</tr>
@@ -198,7 +210,7 @@
 					</td>
 				</tr>
 				<tr>
-					<td class="labelSection">Exported:</td>
+					<td class="labelSection">Embed code:</td>
 					<td>
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
@@ -207,8 +219,8 @@
 				<tr>
 					<td></td>
 					<td>
-						<asp:Button ID="PreviewButton" runat="server" 
-							Text="Preview" OnClick="PreviewButton_Click" />
+						<asp:LinkButton ID="PreviewLink" runat="server" 
+							Text="Preview generated HTML..." OnClick="PreviewLink_Click" />
 					</td>
 				</tr>
 				<tr>
@@ -218,15 +230,11 @@
 						</asp:Label>
 					</td>
 				</tr>
-				
 			</tbody>
 		</table>
 	</div>
 	<div>
 		<asp:Literal ID="PreviewLiteral" runat="server" />
-	</div>
-	<div class="contactSection">
-		Report problem, request feature, say hi: <a href="mailto:dusiadev@gmail.com?Subject=[PAE]">contact developer</a>.
 	</div>
 	</form>
 </body>
