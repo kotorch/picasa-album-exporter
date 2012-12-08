@@ -33,6 +33,8 @@
 			width:150px;
 			height:40px;
 			background-color:#CCCCCC;
+			moz-border-radius: 15px;
+  			-webkit-border-radius: 15px;
 			border-style:solid;
 			border-color:#444444;
 			border-width:2px;
