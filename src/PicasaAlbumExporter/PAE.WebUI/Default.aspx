@@ -19,12 +19,12 @@
 		.headerSection h1
 		{
 			color: #666666;
-			margin-left: 10px;
 		}
 		
 		.headerSection h3
 		{
 			color: #888888;
+			margin-left: 10px;
 		}
 		
 		.headerSection ul
