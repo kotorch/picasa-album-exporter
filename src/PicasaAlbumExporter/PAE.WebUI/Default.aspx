@@ -28,10 +28,14 @@
 		
 		.mainButton
 		{
-			font-size: large;
-			font-weight: bold;
-			width: 140px;
-			height: 40px;
+			font-size:20px;
+			color:#444444;
+			width:150px;
+			height:40px;
+			background-color:#CCCCCC;
+			border-style:solid;
+			border-color:#444444;
+			border-width:2px;
 		}
 		
 		.show
