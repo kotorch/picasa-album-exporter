@@ -68,13 +68,31 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.DropDownList AlbumDropDownList;
         
         /// <summary>
-        /// ResetTemplateButton control.
+        /// ToggleEditorLink control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ResetTemplateButton;
+        protected global::System.Web.UI.WebControls.LinkButton ToggleEditorLink;
+        
+        /// <summary>
+        /// TemplateEditorPanel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel TemplateEditorPanel;
+        
+        /// <summary>
+        /// TemplateTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TemplateTextBox;
         
         /// <summary>
         /// PlaceholdersLiteral control.
@@ -86,13 +104,13 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Literal PlaceholdersLiteral;
         
         /// <summary>
-        /// TemplateTextBox control.
+        /// ResetTemplateButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TemplateTextBox;
+        protected global::System.Web.UI.WebControls.Button ResetTemplateButton;
         
         /// <summary>
         /// WidthTextBox control.
