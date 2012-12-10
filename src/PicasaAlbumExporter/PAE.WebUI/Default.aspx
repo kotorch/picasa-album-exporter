@@ -3,9 +3,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-	<title>Picasa Web Album Exporter, Export Picasa Albums to HTML, Export Picasa Albums to XML</title>
-	<meta name="description" content="Export Google Picasa albums to HTML, BBCode, XML, etc. Include photo captions, custom size images and other information." />
-	<meta name="keywords" content="google,picasa,export,to,html,album,captions,photos,images" />
+	<title>Picasa Web Album Exporter, Convert Picasa Albums to HTML, Export Picasa Albums as XML, BBCode</title>
+	<meta name="description" content="The simplest and most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
+	<meta name="keywords" content="google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	
