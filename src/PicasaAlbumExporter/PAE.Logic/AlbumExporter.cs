@@ -33,7 +33,7 @@ namespace PAE.Logic
 		public const int DEFAULT_PREVIEW_HEIGHT = 768;
 		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
 			+ "<p><a href=\"" + ORIGINAL + "\" title=\"Open full-size\"><img src=\"" + IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
-			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">This photo on Picasa</a></i></sub></p>";
+			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">View on Picasa</a></i></sub></p>";
 
 		#endregion
 
