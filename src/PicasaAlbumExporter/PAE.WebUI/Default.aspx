@@ -3,10 +3,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-	<title>Picasa Web Album Exporter, Export Picasa Albums to HTML, Export Picasa Albums to XML</title>
-	<meta name="description" content="Export Google Picasa albums to HTML, BBCode, XML, etc. Include photo captions, custom size images and other information." />
-	<meta name="keywords" content="google,picasa,export,to,html,album,captions,photos,images" />
+	<title>Picasa Web Album Exporter, Convert Picasa Albums to HTML, Export Picasa Albums as XML, BBCode</title>
+	<meta name="description" content="The simplest and most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
+	<meta name="keywords" content="google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	
 	<style type="text/css">
 		
@@ -147,11 +148,12 @@
 		<h1>Picasa Web Album Exporter<sup>&nbsp;&alpha;</sup></h1>
 		<br />
 		<ul>
-			<li>Export Google Picasa web albums as <b>HTML</b>, <b>BBCode</b>, etc.</li>
-			<li>Export <b>unlisted</b> albums (with a password)</li>
-			<li>Choose desired image size</li>
+			<li>Export Picasa web albums as <b>HTML</b>, <b>XML</b>, <b>BBCode</b>, etc.</li>
+			<li>Export <b>unlisted albums</b> (with a password)</li>
+			<li>Create <b>your own HTML template</b> or use the default one</li>
+			<li>Set <b>any size</b> for landscape or portrait orientation</li>
 			<li>Include photo <b>captions</b>, <b>full-size</b> images and other info</li>
-			<li>Embed in your blog (WordPress, LiveJournal, etc.)</li>
+			<li>Embed in <b>your blog</b> (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly <b>preview</b> exported HTML</li>
 			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
 		</ul>
