@@ -4,10 +4,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<title>Picasa Web Album Exporter, Convert Picasa Albums to HTML, Export Picasa Albums as XML, BBCode</title>
-	<meta name="description" content="The simplest and most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
+	<meta name="description" content="The simplest and the most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
 	<meta name="keywords" content="google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
-	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 	
 	<style type="text/css">
 		
