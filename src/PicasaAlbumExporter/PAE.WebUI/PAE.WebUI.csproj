@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="sitemap.xml" />
     <Content Include="Web.Release.config" />
   </ItemGroup>
   <ItemGroup>
