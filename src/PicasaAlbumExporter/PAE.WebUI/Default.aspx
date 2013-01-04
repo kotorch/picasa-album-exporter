@@ -143,6 +143,15 @@
 	</script>
 </head>
 <body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+  		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
 		<h1>Picasa Web Album Exporter<sup>&nbsp;&alpha;</sup></h1>
@@ -156,6 +165,7 @@
 			<li>Embed in <b>your blog</b> (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly <b>preview</b> exported HTML</li>
 			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
+			<li><div class="fb-like" data-href="http://picasaalbumexporter.apphb.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></li>
 		</ul>
 	</div>
 	<div>
