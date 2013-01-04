@@ -165,7 +165,7 @@
 			<li>Embed in <b>your blog</b> (WordPress, LiveJournal, etc.)</li>
 			<li>Instantly <b>preview</b> exported HTML</li>
 			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
-			<li><div class="fb-like" data-href="http://picasaalbumexporter.apphb.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="true"></div></li>
+			<li><div class="fb-like" data-href="http://picasaalbumexporter.apphb.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div> to your friends</li>
 		</ul>
 	</div>
 	<div>
