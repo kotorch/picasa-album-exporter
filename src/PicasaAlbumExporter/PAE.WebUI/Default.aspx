@@ -3,7 +3,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-	<title>Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Convert Picasa Albums to XML, BBCode</title>
+	<title><asp:Literal ID="LiteralPageTitle" runat="server" Text="<% $Resources:Strings, PageTitle %>" /></title>
 	<meta name="description" content="The simplest and the most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
 	<meta name="keywords" content="google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
@@ -32,6 +32,16 @@
 		.headerSection ul
 		{
 			color: Gray;
+		}
+		
+		.headerSection ul li
+		{
+			margin-bottom: 2px;
+		}
+		
+		.headerSection ul li div
+		{
+			display: inline;
 		}
 		
 		.labelSection
@@ -148,24 +158,28 @@
   		  var js, fjs = d.getElementsByTagName(s)[0];
 		  if (d.getElementById(id)) return;
 		  js = d.createElement(s); js.id = id;
-		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+		  js.src = '//connect.facebook.net/<%= FacebookLocale %>/all.js#xfbml=1';
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));
 	</script>
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
-		<h1>Picasa Web Album Exporter<sup>&nbsp;&alpha;</sup></h1>
+		<h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<% $Resources:Strings, SiteHeader %>" /><sup>&nbsp;&alpha;</sup></h1>
 		<br />
 		<ul>
-			<li>Export Picasa web albums as <b>HTML</b>, <b>XML</b>, <b>BBCode</b>, etc.</li>
-			<li>Export <b>unlisted albums</b> (with a password)</li>
-			<li>Create <b>your own HTML template</b> or use the default one</li>
-			<li>Set <b>any size</b> for landscape or portrait orientation</li>
-			<li>Include photo <b>captions</b>, <b>full-size</b> images and other info</li>
-			<li>Embed in <b>your blog</b> (WordPress, LiveJournal, etc.)</li>
-			<li>Instantly <b>preview</b> exported HTML</li>
-			<li><a href="mailto:dusiadev@gmail.com?Subject=[PAE]">Contact developer</a> to report problem or request new feature</li>
-			<li><div class="fb-like" data-href="http://picasaalbumexporter.apphb.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div> to your friends</li>
+			<li><asp:Literal ID="LiteralSiteFeature1" runat="server" Text="<% $Resources:Strings, SiteFeature1 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature2" runat="server" Text="<% $Resources:Strings, SiteFeature2 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature3" runat="server" Text="<% $Resources:Strings, SiteFeature3 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature4" runat="server" Text="<% $Resources:Strings, SiteFeature4 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature5" runat="server" Text="<% $Resources:Strings, SiteFeature5 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature6" runat="server" Text="<% $Resources:Strings, SiteFeature6 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature7" runat="server" Text="<% $Resources:Strings, SiteFeature7 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature8" runat="server" Text="<% $Resources:Strings, SiteFeature8 %>" /></li>
+			<li>
+				<asp:Literal ID="LiteralSiteFeature9" runat="server" Text="<% $Resources:Strings, SiteFeature9 %>" />
+				<div class="fb-like" data-href='<%= "http://picasaalbumexporter.apphb.com/" + SelectedLanguage %>' data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
+				<asp:Literal ID="LiteralSiteFeature10" runat="server" Text="<% $Resources:Strings, SiteFeature10 %>" />
+			</li>
 		</ul>
 	</div>
 	<div>

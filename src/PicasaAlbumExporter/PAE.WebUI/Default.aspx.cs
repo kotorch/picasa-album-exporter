@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Web;
+using System.Threading;
 using PAE.Logic;
 
 namespace PAE.WebUI
 {
-	public partial class _Default : System.Web.UI.Page
+	public partial class _Default : BasePage
 	{
 		#region Constants
 
@@ -19,6 +19,19 @@ namespace PAE.WebUI
 		private const string PLACEHOLDER_BUTTON_FORMAT = "<button class=\"placeholderButton\" id=\"btn_{0}\" title=\"{1}\"" 
 													   + " onclick=\"InsertPlaceholder('{2}'); return false;\">{3}</button>";
 
+		#endregion
+
+		#region Properties
+
+		protected string FacebookLocale
+		{
+			get
+			{
+				string output = Thread.CurrentThread.CurrentCulture.Name.Replace("-", "_");
+				return output;
+			}
+		}
+		
 		#endregion
 
 		#region Event Handlers
