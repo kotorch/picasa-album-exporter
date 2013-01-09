@@ -117,8 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="By" xml:space="preserve">
+    <value>&amp;nbsp;&amp;nbsp;x&amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="EditTemplate" xml:space="preserve">
+    <value>Edit template...</value>
+  </data>
+  <data name="EmbedCode" xml:space="preserve">
+    <value>Embed code:</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Enter username:</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FitImageWithin" xml:space="preserve">
+    <value>Fit image within&amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="GetAlbums" xml:space="preserve">
+    <value>Get Albums</value>
+  </data>
+  <data name="HideTemplateEditor" xml:space="preserve">
+    <value>Hide template editor</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsChecked" xml:space="preserve">
+    <value>Include unlisted albums / Password:</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsUnchecked" xml:space="preserve">
+    <value>Include unlisted albums</value>
+  </data>
   <data name="PageTitle" xml:space="preserve">
     <value>Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>&amp;nbsp;&amp;nbsp;pixels</value>
+  </data>
+  <data name="PlaceholderCaption" xml:space="preserve">
+    <value>Photo caption</value>
+  </data>
+  <data name="PlaceholderCounter" xml:space="preserve">
+    <value>Sequential number of the photo in the album</value>
+  </data>
+  <data name="PlaceholderFileName" xml:space="preserve">
+    <value>Original file name with an extension</value>
+  </data>
+  <data name="PlaceholderImage" xml:space="preserve">
+    <value>Resized according to your settings image URL</value>
+  </data>
+  <data name="PlaceholderOriginal" xml:space="preserve">
+    <value>Original full-size image URL</value>
+  </data>
+  <data name="PlaceholderPicasaUrl" xml:space="preserve">
+    <value>Link to the photo page on Picasa website</value>
+  </data>
+  <data name="PreviewHtml" xml:space="preserve">
+    <value>Preview generated HTML...</value>
+  </data>
+  <data name="SelectAlbum" xml:space="preserve">
+    <value>Select album:</value>
   </data>
   <data name="SiteFeature1" xml:space="preserve">
     <value>Export Picasa web albums as &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt;, etc.</value>
@@ -145,12 +202,15 @@
     <value>Instantly &lt;b&gt;preview&lt;/b&gt; exported HTML</value>
   </data>
   <data name="SiteFeature8" xml:space="preserve">
-    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Contact developer&lt;/a&gt; to report problem or request new feature</value>
+    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Contact developer&lt;/a&gt; to report problem or &lt;b&gt;request new feature&lt;/b&gt;</value>
   </data>
   <data name="SiteFeature9" xml:space="preserve">
     <value>Spread the word:&amp;nbsp;</value>
   </data>
   <data name="SiteHeader" xml:space="preserve">
     <value>Picasa Web Album Exporter</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>Undo Changes</value>
   </data>
 </root>

@@ -32,6 +32,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.HtmlControls.HtmlForm PaeForm;
         
         /// <summary>
+        /// LanguagesPlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder LanguagesPlaceHolder;
+        
+        /// <summary>
         /// LiteralSiteHeader control.
         /// </summary>
         /// <remarks>
@@ -131,6 +140,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Literal LiteralSiteFeature10;
         
         /// <summary>
+        /// LiteralEnterUsername control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralEnterUsername;
+        
+        /// <summary>
         /// UsernameTextBox control.
         /// </summary>
         /// <remarks>
@@ -165,6 +183,15 @@ namespace PAE.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button GetAlbumsButton;
+        
+        /// <summary>
+        /// LiteralSelectAlbum control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralSelectAlbum;
         
         /// <summary>
         /// AlbumDropDownList control.
@@ -221,6 +248,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Button ResetTemplateButton;
         
         /// <summary>
+        /// LiteralFitImageWithin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralFitImageWithin;
+        
+        /// <summary>
         /// WidthTextBox control.
         /// </summary>
         /// <remarks>
@@ -228,6 +264,15 @@ namespace PAE.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox WidthTextBox;
+        
+        /// <summary>
+        /// LiteralBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralBy;
         
         /// <summary>
         /// HeightTextBox control.
@@ -239,6 +284,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.TextBox HeightTextBox;
         
         /// <summary>
+        /// LiteralPixels control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralPixels;
+        
+        /// <summary>
         /// ExportButton control.
         /// </summary>
         /// <remarks>
@@ -246,6 +300,15 @@ namespace PAE.WebUI {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button ExportButton;
+        
+        /// <summary>
+        /// LiteralEmbedCode control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralEmbedCode;
         
         /// <summary>
         /// ResultTextBox control.

@@ -25,7 +25,7 @@ namespace PAE.WebUI
 		{
 			get
 			{
-				string supportedCultures = string.Join("|", Enum.GetNames(typeof(SupportedCultures))).ToLower();
+				string supportedCultures = string.Join("|", Enum.GetNames(typeof(SupportedLanguages))).ToLower();
 				string output = string.Format(CULTURE_REGEX_FORMAT, supportedCultures);
 
 				return output;

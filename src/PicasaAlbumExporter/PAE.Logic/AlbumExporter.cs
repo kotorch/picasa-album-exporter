@@ -7,6 +7,21 @@ namespace PAE.Logic
 {
 	public class AlbumExporter : PicasaServiceClient
 	{
+		#region Classes
+
+		public static class Placeholders
+		{
+			public const string COUNTER = "<<COUNTER>>";
+			public const string CAPTION = "<<CAPTION>>";
+			public const string ORIGINAL = "<<ORIGINAL>>";
+			public const string IMAGE = "<<IMAGE>>";
+			public const string PICASA_URL = "<<PICASA-URL>>";
+			public const string FILE_NAME = "<<FILE-NAME>>";
+			public const string PHOTO_EXTENSIONS = "<<PHOTO-EXTENSIONS>>";
+		}
+
+		#endregion
+
 		#region Constants
 
 		private const string APP_NAME = "PicasaAlbumExporter";
@@ -21,19 +36,12 @@ namespace PAE.Logic
 		private const string NEW_LINE = "\n";
 		private const string HTML_BREAK = "<br />";
 
-		private const string COUNTER = "<<COUNTER>>";
-		private const string CAPTION = "<<CAPTION>>";
-		private const string ORIGINAL = "<<ORIGINAL>>";
-		private const string IMAGE = "<<IMAGE>>";
-		private const string PICASA_URL = "<<PICASA-URL>>";
-		private const string FILE_NAME = "<<FILE-NAME>>";
-		private const string PHOTO_EXTENSIONS = "<<PHOTO-EXTENSIONS>>";
-
 		public const int DEFAULT_PREVIEW_WIDTH = 1024;
 		public const int DEFAULT_PREVIEW_HEIGHT = 768;
-		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + COUNTER + "\">" + COUNTER + "</a>. " + CAPTION + "</p>"
-			+ "<p><a href=\"" + ORIGINAL + "\" title=\"Open full-size\"><img src=\"" + IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
-			+ "<br /><sub><i><a href=\"" + PICASA_URL + "\">View on Picasa</a></i></sub></p>";
+		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + Placeholders.COUNTER + "\">" + Placeholders.COUNTER + "</a>. " + Placeholders.CAPTION 
+												+ "</p><p><a href=\"" + Placeholders.ORIGINAL + "\" title=\"Open full-size\"><img src=\"" 
+												+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>" 
+												+ "<br /><sub><i><a href=\"" + Placeholders.PICASA_URL + "\">View on Picasa</a></i></sub></p>";
 
 		#endregion
 
@@ -47,16 +55,6 @@ namespace PAE.Logic
 		private int previewWidth = DEFAULT_PREVIEW_WIDTH;
 		private int previewHeight = DEFAULT_PREVIEW_HEIGHT;
 
-		public static readonly IDictionary<string, string> Placeholders = new Dictionary<string, string>
-		{
-				{ CAPTION, "Photo caption" },
-				{ COUNTER, "Sequential number of the photo in the album" },
-				{ FILE_NAME, "Original file name with an extension" },
-				{ IMAGE, "Resized according to your settings image URL" },
-				{ ORIGINAL, "Original full-size image URL" },
-				{ PICASA_URL, "Link to the photo page on Picasa website" },
-		};
-
 		#endregion
 
 		#region Constructor
@@ -65,13 +63,13 @@ namespace PAE.Logic
 		{
 			this.valueGetters = new Dictionary<string, ValueGetter> 
 			{ 
-				{ COUNTER, (photo) => { return (++photoCounter).ToString(); } },
-				{ CAPTION, (photo) => { return GetPhotoCaption(photo); } },
-				{ ORIGINAL, (photo) => { return GetImageUrl(photo, FULL_SIZE); } },
-				{ IMAGE, (photo) => { return GetPreviewUrl(photo); } },
-				{ PICASA_URL, (photo) => { return GetPicasaUrl(photo); } },
-				{ FILE_NAME, (photo) => { return photo.Media.Title.Value; } },
-				{ PHOTO_EXTENSIONS, (photo) => { return GetPhotoExtensions(photo); } },
+				{ Placeholders.COUNTER, (photo) => { return (++photoCounter).ToString(); } },
+				{ Placeholders.CAPTION, (photo) => { return GetPhotoCaption(photo); } },
+				{ Placeholders.ORIGINAL, (photo) => { return GetImageUrl(photo, FULL_SIZE); } },
+				{ Placeholders.IMAGE, (photo) => { return GetPreviewUrl(photo); } },
+				{ Placeholders.PICASA_URL, (photo) => { return GetPicasaUrl(photo); } },
+				{ Placeholders.FILE_NAME, (photo) => { return photo.Media.Title.Value; } },
+				{ Placeholders.PHOTO_EXTENSIONS, (photo) => { return GetPhotoExtensions(photo); } },
 			};
 		}
 

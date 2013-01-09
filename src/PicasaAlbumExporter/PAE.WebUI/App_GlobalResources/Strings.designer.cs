@@ -61,11 +61,182 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &amp;nbsp;&amp;nbsp;x&amp;nbsp;&amp;nbsp;.
+        /// </summary>
+        public static string By {
+            get {
+                return ResourceManager.GetString("By", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit template....
+        /// </summary>
+        public static string EditTemplate {
+            get {
+                return ResourceManager.GetString("EditTemplate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Embed code:.
+        /// </summary>
+        public static string EmbedCode {
+            get {
+                return ResourceManager.GetString("EmbedCode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter username:.
+        /// </summary>
+        public static string EnterUsername {
+            get {
+                return ResourceManager.GetString("EnterUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export.
+        /// </summary>
+        public static string Export {
+            get {
+                return ResourceManager.GetString("Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fit image within&amp;nbsp;&amp;nbsp;.
+        /// </summary>
+        public static string FitImageWithin {
+            get {
+                return ResourceManager.GetString("FitImageWithin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Get Albums.
+        /// </summary>
+        public static string GetAlbums {
+            get {
+                return ResourceManager.GetString("GetAlbums", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hide template editor.
+        /// </summary>
+        public static string HideTemplateEditor {
+            get {
+                return ResourceManager.GetString("HideTemplateEditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include unlisted albums / Password:.
+        /// </summary>
+        public static string IncludeUnlistedAlbumsChecked {
+            get {
+                return ResourceManager.GetString("IncludeUnlistedAlbumsChecked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include unlisted albums.
+        /// </summary>
+        public static string IncludeUnlistedAlbumsUnchecked {
+            get {
+                return ResourceManager.GetString("IncludeUnlistedAlbumsUnchecked", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog.
         /// </summary>
         public static string PageTitle {
             get {
                 return ResourceManager.GetString("PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &amp;nbsp;&amp;nbsp;pixels.
+        /// </summary>
+        public static string Pixels {
+            get {
+                return ResourceManager.GetString("Pixels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Photo caption.
+        /// </summary>
+        public static string PlaceholderCaption {
+            get {
+                return ResourceManager.GetString("PlaceholderCaption", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sequential number of the photo in the album.
+        /// </summary>
+        public static string PlaceholderCounter {
+            get {
+                return ResourceManager.GetString("PlaceholderCounter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original file name with an extension.
+        /// </summary>
+        public static string PlaceholderFileName {
+            get {
+                return ResourceManager.GetString("PlaceholderFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Resized according to your settings image URL.
+        /// </summary>
+        public static string PlaceholderImage {
+            get {
+                return ResourceManager.GetString("PlaceholderImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Original full-size image URL.
+        /// </summary>
+        public static string PlaceholderOriginal {
+            get {
+                return ResourceManager.GetString("PlaceholderOriginal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Link to the photo page on Picasa website.
+        /// </summary>
+        public static string PlaceholderPicasaUrl {
+            get {
+                return ResourceManager.GetString("PlaceholderPicasaUrl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview generated HTML....
+        /// </summary>
+        public static string PreviewHtml {
+            get {
+                return ResourceManager.GetString("PreviewHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select album:.
+        /// </summary>
+        public static string SelectAlbum {
+            get {
+                return ResourceManager.GetString("SelectAlbum", resourceCulture);
             }
         }
         
@@ -142,7 +313,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;a href=&quot;mailto:dusiadev@gmail.com?Subject=[PAE]&quot;&gt;Contact developer&lt;/a&gt; to report problem or request new feature.
+        ///   Looks up a localized string similar to &lt;a href=&quot;mailto:dusiadev@gmail.com?Subject=[PAE]&quot;&gt;Contact developer&lt;/a&gt; to report problem or &lt;b&gt;request new feature&lt;/b&gt;.
         /// </summary>
         public static string SiteFeature8 {
             get {
@@ -165,6 +336,15 @@ namespace Resources {
         public static string SiteHeader {
             get {
                 return ResourceManager.GetString("SiteHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Undo Changes.
+        /// </summary>
+        public static string UndoChanges {
+            get {
+                return ResourceManager.GetString("UndoChanges", resourceCulture);
             }
         }
     }

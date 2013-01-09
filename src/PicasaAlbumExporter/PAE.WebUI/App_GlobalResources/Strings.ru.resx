@@ -117,8 +117,65 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="By" xml:space="preserve">
+    <value>&amp;nbsp;на&amp;nbsp;</value>
+  </data>
+  <data name="EditTemplate" xml:space="preserve">
+    <value>Редактировать шаблон...</value>
+  </data>
+  <data name="EmbedCode" xml:space="preserve">
+    <value>Код для вставки:</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Имя акаунта:</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Экспортировать альбом</value>
+  </data>
+  <data name="FitImageWithin" xml:space="preserve">
+    <value>Уменьшить слишком большие изображения до размера&amp;nbsp;</value>
+  </data>
+  <data name="GetAlbums" xml:space="preserve">
+    <value>Получить список альбомов</value>
+  </data>
+  <data name="HideTemplateEditor" xml:space="preserve">
+    <value>Спрятать редактор шаблона</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsChecked" xml:space="preserve">
+    <value>Включить закрытые альбомы / Пароль:</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsUnchecked" xml:space="preserve">
+    <value>Включить закрытые альбомы</value>
+  </data>
   <data name="PageTitle" xml:space="preserve">
     <value>Экспорт веб-альбомов Picasa, экспортировать альбом из Пикасы в HTML с подписями, вставить альбом из Пикасы в блог</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>&amp;nbsp;пикселей</value>
+  </data>
+  <data name="PlaceholderCaption" xml:space="preserve">
+    <value>Подпись к изображению</value>
+  </data>
+  <data name="PlaceholderCounter" xml:space="preserve">
+    <value>Порядковый номер изображения в альбоме</value>
+  </data>
+  <data name="PlaceholderFileName" xml:space="preserve">
+    <value>Имя файла с расширением</value>
+  </data>
+  <data name="PlaceholderImage" xml:space="preserve">
+    <value>Ссылка на изображение в размере, заданном настройками</value>
+  </data>
+  <data name="PlaceholderOriginal" xml:space="preserve">
+    <value>Ссылка на изображение в оригинальном размере</value>
+  </data>
+  <data name="PlaceholderPicasaUrl" xml:space="preserve">
+    <value>Ссылка на страницу изображения в веб-альбоме Picasa</value>
+  </data>
+  <data name="PreviewHtml" xml:space="preserve">
+    <value>Предварительный просмотр полученного HTML-кода...</value>
+  </data>
+  <data name="SelectAlbum" xml:space="preserve">
+    <value>Выбор альбома:</value>
   </data>
   <data name="SiteFeature1" xml:space="preserve">
     <value>Экспортируйте альбомы из Пикасы в формате &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt; и др.</value>
@@ -145,12 +202,15 @@
     <value>Посмотрите, &lt;b&gt;как будет выглядеть&lt;/b&gt; полученный HTML-код</value>
   </data>
   <data name="SiteFeature8" xml:space="preserve">
-    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Сообщите разработчику&lt;/a&gt; о проблеме или недостающей функциональности</value>
+    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Сообщите разработчику&lt;/a&gt; о проблеме или &lt;b&gt;недостающей функциональности&lt;/b&gt;</value>
   </data>
   <data name="SiteFeature9" xml:space="preserve">
     <value>Распространите информацию:&amp;nbsp;</value>
   </data>
   <data name="SiteHeader" xml:space="preserve">
     <value>Экспорт веб-альбомов Picasa</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>Сбросить шаблон</value>
   </data>
 </root>

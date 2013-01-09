@@ -15,18 +15,25 @@
 		{
 			padding-left: 140px; 
 			margin-bottom: 40px;
+			width: 610px;
 		}
 			
 		.headerSection h1
 		{
 			color: #666666;
 			margin-left: 10px;
+			width: 500px;
 		}
 			
 		.headerSection h1 sup
 		{
 			color:#cccccc;
 			font-size: normal !important;
+		}
+		
+		.headerSection .languageSelector
+		{
+			float: right;
 		}
 		
 		.headerSection ul
@@ -164,6 +171,7 @@
 	</script>
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
+		<div class="languageSelector"><asp:PlaceHolder ID="LanguagesPlaceHolder" runat="server" /></div>
 		<h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<% $Resources:Strings, SiteHeader %>" /><sup>&nbsp;&alpha;</sup></h1>
 		<br />
 		<ul>
@@ -186,7 +194,7 @@
 		<table width="760px" cellspacing="7px">
 			<tbody>
 				<tr>
-					<td class="labelSection">Enter username:</td>
+					<td class="labelSection"><asp:Literal ID="LiteralEnterUsername" runat="server" Text="<% $Resources:Strings, EnterUsername %>" /></td>
 					<td>
 						<asp:TextBox ID="UsernameTextBox" runat="server" CssClass="credentialTextBox"></asp:TextBox>
 						<asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
@@ -199,11 +207,11 @@
 					<td></td>
 					<td>
 						<asp:Button ID="GetAlbumsButton" runat="server" CssClass="mainButton"
-							Text="Get Albums" OnClick="GetAlbumsButton_Click" />
+							Text="<% $Resources:Strings, GetAlbums %>" OnClick="GetAlbumsButton_Click" />
 					</td>
 				</tr>
 				<tr>
-					<td class="labelSection">Select album:</td>
+					<td class="labelSection"><asp:Literal ID="LiteralSelectAlbum" runat="server" Text="<% $Resources:Strings, SelectAlbum %>" /></td>
 					<td>
 						<asp:DropDownList ID="AlbumDropDownList" runat="server" CssClass="selectAlbum">
 						</asp:DropDownList>
@@ -212,7 +220,7 @@
 				<tr>
 					<td></td>
 					<td>
-						<asp:LinkButton ID="ToggleEditorLink" runat="server" Text="Edit template..."
+						<asp:LinkButton ID="ToggleEditorLink" runat="server" Text="<% $Resources:Strings, EditTemplate %>"
 							OnClick="ToggleEditorLink_Click" />
 						<asp:Panel ID="TemplateEditorPanel" runat="server">
 							<asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
@@ -222,14 +230,14 @@
 							</div>
 							<div class="undoChanges">
 								<asp:Button ID="ResetTemplateButton" runat="server"
-									Text="Undo Changes" OnClick="ResetTemplateButton_Click" />
+									Text="<% $Resources:Strings, UndoChanges %>" OnClick="ResetTemplateButton_Click" />
 							</div>
 							<div class="imageSizeSection">
-								Fit image within&nbsp;&nbsp;
+								<asp:Literal ID="LiteralFitImageWithin" runat="server" Text="<% $Resources:Strings, FitImageWithin %>" />
 								<asp:TextBox ID="WidthTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
-								&nbsp;&nbsp;x&nbsp;&nbsp;
+								<asp:Literal ID="LiteralBy" runat="server" Text="<% $Resources:Strings, By %>" />
 								<asp:TextBox ID="HeightTextBox" runat="server" CssClass="paeNumericTextBox"></asp:TextBox>
-								&nbsp;&nbsp;pixels
+								<asp:Literal ID="LiteralPixels" runat="server" Text="<% $Resources:Strings, Pixels %>" />
 							</div>
 						</asp:Panel>
 					</td>
@@ -238,11 +246,11 @@
 					<td></td>
 					<td>
 						<asp:Button ID="ExportButton" runat="server" CssClass="mainButton" 
-							Text="Export" OnClick="ExportButton_Click" />
+							Text="<% $Resources:Strings, Export %>" OnClick="ExportButton_Click" />
 					</td>
 				</tr>
 				<tr>
-					<td class="labelSection">Embed code:</td>
+					<td class="labelSection"><asp:Literal ID="LiteralEmbedCode" runat="server" Text="<% $Resources:Strings, EmbedCode %>" /></td>
 					<td>
 						<asp:TextBox ID="ResultTextBox" runat="server" CssClass="paeTextArea"
 							TextMode="MultiLine"></asp:TextBox>
@@ -252,7 +260,7 @@
 					<td></td>
 					<td>
 						<asp:LinkButton ID="PreviewLink" runat="server" 
-							Text="Preview generated HTML..." OnClick="PreviewLink_Click" />
+							Text="<% $Resources:Strings, PreviewHtml %>" OnClick="PreviewLink_Click" />
 					</td>
 				</tr>
 				<tr>

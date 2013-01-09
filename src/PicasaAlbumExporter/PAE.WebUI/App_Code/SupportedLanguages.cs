@@ -1,6 +1,6 @@
 ﻿namespace PAE.WebUI
 {
-	public enum SupportedCultures
+	public enum SupportedLanguages
 	{
 		En,
 		Ru,
