@@ -6,12 +6,32 @@ namespace PAE.WebUI
 {
 	public class BasePage : Page
 	{
+		#region Fields
+
+		private string m_selectedLanguage;
+
+		#endregion
+
 		#region Properties
 
 		public string SelectedLanguage
 		{
-			protected get;
-			set;
+			protected get
+			{
+				return this.m_selectedLanguage;
+			}
+
+			set
+			{
+				if (value != null && value.ToLower() == SupportedLanguages.En.ToString().ToLower())
+				{
+					this.m_selectedLanguage = string.Empty;
+				}
+				else
+				{
+					this.m_selectedLanguage = value;
+				}
+			}
 		}
 
 		#endregion

@@ -151,6 +151,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The simplest and the most flexible way to export Google Picasa albums as HTML to embed in your blog. Allows you to include photo captions, custom size images and other information. .
+        /// </summary>
+        public static string MetaDescription {
+            get {
+                return ResourceManager.GetString("MetaDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, embed, blog.
+        /// </summary>
+        public static string MetaKeywords {
+            get {
+                return ResourceManager.GetString("MetaKeywords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog.
         /// </summary>
         public static string PageTitle {

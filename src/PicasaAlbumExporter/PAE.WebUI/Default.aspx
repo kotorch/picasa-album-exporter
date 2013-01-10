@@ -4,8 +4,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 	<title><asp:Literal ID="LiteralPageTitle" runat="server" Text="<% $Resources:Strings, PageTitle %>" /></title>
-	<meta name="description" content="The simplest and the most flexible way to export Google Picasa albums as HTML, BBCode, XML, etc. Allows you to include photo captions, custom size images and other information." />
-	<meta name="keywords" content="google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image" />
+	<meta name="description" content="<% $Resources:Strings, MetaDescription %>" />
+	<meta name="keywords" content="<% $Resources:Strings, MetaKeywords %>" />
 	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
 	<meta name="msvalidate.01" content="465E989B888FE3599826616299E23DE0" />
 
@@ -172,7 +172,7 @@
 	<form id="PaeForm" runat="server">
 	<div class="headerSection">
 		<div class="languageSelector"><asp:PlaceHolder ID="LanguagesPlaceHolder" runat="server" /></div>
-		<h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<% $Resources:Strings, SiteHeader %>" /><sup>&nbsp;&alpha;</sup></h1>
+		<h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<% $Resources:Strings, SiteHeader %>" /><sup>&nbsp;&beta;</sup></h1>
 		<br />
 		<ul>
 			<li><asp:Literal ID="LiteralSiteFeature1" runat="server" Text="<% $Resources:Strings, SiteFeature1 %>" /></li>
