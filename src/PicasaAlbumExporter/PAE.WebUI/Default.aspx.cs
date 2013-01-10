@@ -8,7 +8,7 @@ using System.Threading;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using PAE.Logic;
-using PAE.WebUI.App_GlobalResources;
+using Resources;
 
 namespace PAE.WebUI
 {
