@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="By" xml:space="preserve">
+    <value>&amp;nbsp;&amp;nbsp;x&amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="EditTemplate" xml:space="preserve">
+    <value>Edit template...</value>
+  </data>
+  <data name="EmbedCode" xml:space="preserve">
+    <value>Embed code:</value>
+  </data>
+  <data name="EnterUsername" xml:space="preserve">
+    <value>Enter username:</value>
+  </data>
+  <data name="Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="FitImageWithin" xml:space="preserve">
+    <value>Fit image within&amp;nbsp;&amp;nbsp;</value>
+  </data>
+  <data name="GetAlbums" xml:space="preserve">
+    <value>Get Albums</value>
+  </data>
+  <data name="HideTemplateEditor" xml:space="preserve">
+    <value>Hide template editor</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsChecked" xml:space="preserve">
+    <value>Include unlisted albums / Password:</value>
+  </data>
+  <data name="IncludeUnlistedAlbumsUnchecked" xml:space="preserve">
+    <value>Include unlisted albums</value>
+  </data>
+  <data name="MetaDescription" xml:space="preserve">
+    <value>The simplest and the most flexible way to export Google Picasa albums as HTML to embed in your blog. Allows you to include photo captions, custom size images and other information. </value>
+  </data>
+  <data name="MetaKeywords" xml:space="preserve">
+    <value>google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, embed, blog</value>
+  </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog</value>
+  </data>
+  <data name="Pixels" xml:space="preserve">
+    <value>&amp;nbsp;&amp;nbsp;pixels</value>
+  </data>
+  <data name="PlaceholderCaption" xml:space="preserve">
+    <value>Photo caption</value>
+  </data>
+  <data name="PlaceholderCounter" xml:space="preserve">
+    <value>Sequential number of the photo in the album</value>
+  </data>
+  <data name="PlaceholderFileName" xml:space="preserve">
+    <value>Original file name with an extension</value>
+  </data>
+  <data name="PlaceholderImage" xml:space="preserve">
+    <value>Resized according to your settings image URL</value>
+  </data>
+  <data name="PlaceholderOriginal" xml:space="preserve">
+    <value>Original full-size image URL</value>
+  </data>
+  <data name="PlaceholderPicasaUrl" xml:space="preserve">
+    <value>Link to the photo page on Picasa website</value>
+  </data>
+  <data name="PreviewHtml" xml:space="preserve">
+    <value>Preview generated HTML...</value>
+  </data>
+  <data name="SelectAlbum" xml:space="preserve">
+    <value>Select album:</value>
+  </data>
+  <data name="SiteFeature1" xml:space="preserve">
+    <value>Export Picasa web albums as &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt;, etc.</value>
+  </data>
+  <data name="SiteFeature10" xml:space="preserve">
+    <value>&amp;nbsp;to your friends</value>
+  </data>
+  <data name="SiteFeature2" xml:space="preserve">
+    <value>Export &lt;b&gt;unlisted albums&lt;/b&gt; (with a password)</value>
+  </data>
+  <data name="SiteFeature3" xml:space="preserve">
+    <value>Create &lt;b&gt;your own HTML template&lt;/b&gt; or use the default one</value>
+  </data>
+  <data name="SiteFeature4" xml:space="preserve">
+    <value>Set &lt;b&gt;any size&lt;/b&gt; for landscape or portrait orientation</value>
+  </data>
+  <data name="SiteFeature5" xml:space="preserve">
+    <value>Include photo &lt;b&gt;captions&lt;/b&gt;, &lt;b&gt;full-size&lt;/b&gt; images and other info</value>
+  </data>
+  <data name="SiteFeature6" xml:space="preserve">
+    <value>Embed in &lt;b&gt;your blog&lt;/b&gt; (WordPress, LiveJournal, etc.)</value>
+  </data>
+  <data name="SiteFeature7" xml:space="preserve">
+    <value>Instantly &lt;b&gt;preview&lt;/b&gt; exported HTML</value>
+  </data>
+  <data name="SiteFeature8" xml:space="preserve">
+    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Contact developer&lt;/a&gt; to report problem or &lt;b&gt;request new feature&lt;/b&gt;</value>
+  </data>
+  <data name="SiteFeature9" xml:space="preserve">
+    <value>Spread the word:&amp;nbsp;</value>
+  </data>
+  <data name="SiteHeader" xml:space="preserve">
+    <value>Picasa Web Album Exporter</value>
+  </data>
+  <data name="UndoChanges" xml:space="preserve">
+    <value>Undo Changes</value>
+  </data>
+</root>

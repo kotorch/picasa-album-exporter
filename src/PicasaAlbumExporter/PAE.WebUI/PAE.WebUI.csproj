@@ -75,6 +75,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="App_GlobalResources\Test.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Test.resx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +120,12 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Strings.ru.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
+    <EmbeddedResource Include="App_GlobalResources\Test.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Test.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
