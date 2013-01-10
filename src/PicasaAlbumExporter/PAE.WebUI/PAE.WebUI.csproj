@@ -105,6 +105,7 @@
       <LastGenOutput>Strings.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
       <CustomToolNamespace>Resources</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -113,6 +114,7 @@
       <LastGenOutput>Strings.ru.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
       <CustomToolNamespace>Resources</CustomToolNamespace>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
