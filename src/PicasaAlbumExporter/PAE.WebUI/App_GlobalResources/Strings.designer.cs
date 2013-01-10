@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Resources {
+namespace PAE.WebUI.App_GlobalResources {
     using System;
     
     
