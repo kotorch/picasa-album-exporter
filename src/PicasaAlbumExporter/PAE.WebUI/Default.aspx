@@ -185,8 +185,7 @@
 			<li><asp:Literal ID="LiteralSiteFeature8" runat="server" Text="<%$ Resources : Strings, SiteFeature8 %>" /></li>
 			<li>
 				<asp:Literal ID="LiteralSiteFeature9" runat="server" Text="<%$ Resources : Strings, SiteFeature9 %>" />
-				<div class="fb-like" data-href='<%= "http://picasaalbumexporter.apphb.com/" + SelectedLanguage %>' data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
-				<asp:Literal ID="LiteralSiteFeature10" runat="server" Text="<%$ Resources : Strings, SiteFeature10 %>" />
+				<div class="fb-like" data-href='<%= "http://picasaalbumexporter.apphb.com/" + SelectedLanguage %>' data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
 			</li>
 		</ul>
 	</div>

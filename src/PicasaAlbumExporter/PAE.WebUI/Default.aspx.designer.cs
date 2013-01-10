@@ -131,15 +131,6 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Literal LiteralSiteFeature9;
         
         /// <summary>
-        /// LiteralSiteFeature10 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LiteralSiteFeature10;
-        
-        /// <summary>
         /// LiteralEnterUsername control.
         /// </summary>
         /// <remarks>
