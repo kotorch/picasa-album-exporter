@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Google.GData.Photos;
 
@@ -36,6 +37,7 @@ namespace PAE.Logic
 		private const string AMPERSAND = @"&";
 		private const string NEW_LINE = "\n";
 		private const string HTML_BREAK = "<br />";
+		private const string CONTENT_VIDEO = "video";
 		private const string DEFAULT_TEMPLATE_FORMAT = "<p><a name=\"" + Placeholders.COUNTER + "\">" + Placeholders.COUNTER + "</a>. " + Placeholders.CAPTION
 													+ "</p><p><a href=\"" + Placeholders.ORIGINAL + "\" title=\"{0}\"><img src=\""
 													+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
@@ -121,9 +123,18 @@ namespace PAE.Logic
 
 		private string GetImageUrl(PicasaEntry photo, string size)
 		{
-			string url = photo.Content.Src.ToString();
-			int insertPosition = url.LastIndexOf(FORWARD_SLASH);
-			string output = url.Insert(insertPosition, SIZE_PREFIX + size);
+			string output;
+
+			if (size == FULL_SIZE && photo.Media.Contents.Any(i => i.Type.StartsWith(CONTENT_VIDEO)))
+			{
+				output = this.GetPicasaUrl(photo);
+			}
+			else
+			{
+				string url = photo.Content.Src.ToString();
+				int insertPosition = url.LastIndexOf(FORWARD_SLASH);
+				output = url.Insert(insertPosition, SIZE_PREFIX + size);
+			}
 
 			return output;
 		}
