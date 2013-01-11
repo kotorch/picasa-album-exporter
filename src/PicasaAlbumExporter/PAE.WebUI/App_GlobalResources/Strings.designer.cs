@@ -169,6 +169,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open full-size.
+        /// </summary>
+        internal static string OpenFullSize {
+            get {
+                return ResourceManager.GetString("OpenFullSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog.
         /// </summary>
         internal static string PageTitle {
@@ -363,6 +372,15 @@ namespace Resources {
         internal static string UndoChanges {
             get {
                 return ResourceManager.GetString("UndoChanges", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to View on Picasa.
+        /// </summary>
+        internal static string ViewOnPicasa {
+            get {
+                return ResourceManager.GetString("ViewOnPicasa", resourceCulture);
             }
         }
     }

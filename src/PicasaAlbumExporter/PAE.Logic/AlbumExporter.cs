@@ -24,8 +24,9 @@ namespace PAE.Logic
 
 		#region Constants
 
-		private const string APP_NAME = "PicasaAlbumExporter";
-
+		public const int DEFAULT_PREVIEW_WIDTH = 1024;
+		public const int DEFAULT_PREVIEW_HEIGHT = 768;
+		
 		private const string FORWARD_SLASH = @"/";
 		private const string SIZE_PREFIX = FORWARD_SLASH + "s";
 		private const string FULL_SIZE = "0";
@@ -35,13 +36,10 @@ namespace PAE.Logic
 		private const string AMPERSAND = @"&";
 		private const string NEW_LINE = "\n";
 		private const string HTML_BREAK = "<br />";
-
-		public const int DEFAULT_PREVIEW_WIDTH = 1024;
-		public const int DEFAULT_PREVIEW_HEIGHT = 768;
-		public const string DEFAULT_TEMPLATE = "<p><a name=\"" + Placeholders.COUNTER + "\">" + Placeholders.COUNTER + "</a>. " + Placeholders.CAPTION 
-												+ "</p><p><a href=\"" + Placeholders.ORIGINAL + "\" title=\"Open full-size\"><img src=\"" 
-												+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>" 
-												+ "<br /><sub><i><a href=\"" + Placeholders.PICASA_URL + "\">View on Picasa</a></i></sub></p>";
+		private const string DEFAULT_TEMPLATE_FORMAT = "<p><a name=\"" + Placeholders.COUNTER + "\">" + Placeholders.COUNTER + "</a>. " + Placeholders.CAPTION
+													+ "</p><p><a href=\"" + Placeholders.ORIGINAL + "\" title=\"{0}\"><img src=\""
+													+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
+													+ "<br /><sub><i><a href=\"" + Placeholders.PICASA_URL + "\">{1}</a></i></sub></p>";
 
 		#endregion
 
@@ -76,6 +74,12 @@ namespace PAE.Logic
 		#endregion
 
 		#region Methods
+
+		public static string GetDefaultTemplate(string openFullSize, string viewOnPicasa)
+		{
+			string output = string.Format(DEFAULT_TEMPLATE_FORMAT, openFullSize, viewOnPicasa);
+			return output;
+		}
 
 		public string ExportAlbum(string albumFeedUri, string template, int previewMaxWidth, int previewMaxHeight)
 		{

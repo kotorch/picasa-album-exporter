@@ -79,7 +79,7 @@ namespace PAE.WebUI
 				this.AlbumDropDownList.Enabled = false;
 
 				this.TemplateEditorPanel.CssClass = HIDE_EDITOR_CSS;
-				this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
+				this.TemplateTextBox.Text = this.GetDefaultTemplateText();
 				this.WidthTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_WIDTH.ToString();
 				this.HeightTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_HEIGHT.ToString();
 				
@@ -149,7 +149,7 @@ namespace PAE.WebUI
 
 		protected void ResetTemplateButton_Click(object sender, EventArgs e)
 		{
-			this.TemplateTextBox.Text = AlbumExporter.DEFAULT_TEMPLATE;
+			this.TemplateTextBox.Text = this.GetDefaultTemplateText();
 		}
 
 		protected void ExportButton_Click(object sender, EventArgs e)
@@ -179,6 +179,12 @@ namespace PAE.WebUI
 		#endregion
 
 		#region Implementation
+
+		private string GetDefaultTemplateText()
+		{
+			string output = AlbumExporter.GetDefaultTemplate(Strings.OpenFullSize, Strings.ViewOnPicasa);
+			return output;
+		}
 
 		private void BuildLanguageSelector()
 		{

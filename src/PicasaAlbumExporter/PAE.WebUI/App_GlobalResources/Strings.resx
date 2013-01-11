@@ -153,6 +153,9 @@
   <data name="MetaKeywords" xml:space="preserve">
     <value>google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, embed, blog</value>
   </data>
+  <data name="OpenFullSize" xml:space="preserve">
+    <value>Open full-size</value>
+  </data>
   <data name="PageTitle" xml:space="preserve">
     <value>Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog</value>
   </data>
@@ -218,5 +221,8 @@
   </data>
   <data name="UndoChanges" xml:space="preserve">
     <value>Undo Changes</value>
+  </data>
+  <data name="ViewOnPicasa" xml:space="preserve">
+    <value>View on Picasa</value>
   </data>
 </root>
