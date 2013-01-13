@@ -148,10 +148,10 @@
     <value>Include unlisted albums</value>
   </data>
   <data name="MetaDescription" xml:space="preserve">
-    <value>The simplest and the most flexible way to export Google Picasa albums as HTML to embed in your blog. Allows you to include photo captions, custom size images and other information. </value>
+    <value>The simplest and the most flexible way to export Google Picasa albums as HTML to publish in your blog. Allows you to include photo captions, custom size images and other information. </value>
   </data>
   <data name="MetaKeywords" xml:space="preserve">
-    <value>google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, embed, blog</value>
+    <value>google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, publish, embed, blog</value>
   </data>
   <data name="OpenFullSize" xml:space="preserve">
     <value>Open full-size</value>
