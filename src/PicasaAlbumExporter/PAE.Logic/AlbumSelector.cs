@@ -7,10 +7,19 @@ using Google.GData.Photos;
 namespace PAE.Logic
 {
 	public class AlbumSelector : PicasaServiceClient
-	{
-		#region Methods
+    {
+        #region Constants
 
-		public Collection<AlbumInfo> GetAlbums(string username, string password)
+        private const string ALBUM_NOT_FOUND_FORMAT = "Album is not found. {0}";
+        private const string PICASAWEB_DOT_GOOGLE = "picasaweb.google";
+        private const string SLASH = "/";
+        private const string ALBUM_NAME_TERMINATORS = @"/?#";
+        
+        #endregion
+
+        #region Methods
+
+        public Collection<AlbumInfo> GetAlbums(string username, string password)
 		{
 			List<AlbumInfo> data = new List<AlbumInfo>();
 
@@ -40,18 +49,18 @@ namespace PAE.Logic
         {
             try
             {
-                int queryStringStart = url.IndexOf("?") + 1;
+                //int queryStringStart = url.IndexOf("?") + 1;
                 //string queryString = queryStringStart > 0 ? url.Substring(queryStringStart).Replace("#", string.Empty) : string.Empty;
                 //var parameters = System.Web.HttpUtility.ParseQueryString(queryString);
 
-                string albumUrl = queryStringStart > 0 ? url.Substring(0, queryStringStart) : url;
-                int start = albumUrl.IndexOf("picasaweb.google");
-                int userStart = albumUrl.IndexOf("/", start) + 1;
-                int userLength = albumUrl.IndexOf("/", userStart) - userStart;
+                string albumUrl = url; //queryStringStart > 0 ? url.Substring(0, queryStringStart) : url;
+                int start = albumUrl.IndexOf(PICASAWEB_DOT_GOOGLE);
+                int userStart = albumUrl.IndexOf(SLASH, start) + 1;
+                int userLength = albumUrl.IndexOf(SLASH, userStart) - userStart;
                 string username = albumUrl.Substring(userStart, userLength);
 
                 int albumStart = userStart + userLength + 1;
-                int albumLength = albumUrl.IndexOfAny(@"/?#".ToCharArray(), albumStart) - albumStart;
+                int albumLength = albumUrl.IndexOfAny(ALBUM_NAME_TERMINATORS.ToCharArray(), albumStart) - albumStart;
                 string albumName = albumLength > 0 ? albumUrl.Substring(albumStart, albumLength) : albumUrl.Substring(albumStart);
 
                 foreach (AlbumInfo album in this.GetAlbums(username, string.Empty))
@@ -62,11 +71,11 @@ namespace PAE.Logic
                     }
                 }
 
-                throw new Exception();
+                throw new Exception(string.Empty);
             }
             catch (Exception ex)
-            { 
-                throw new ArgumentException("Album is not found.", ex);
+            {
+                throw new ArgumentException(string.Format(ALBUM_NOT_FOUND_FORMAT, ex.Message));
             }
         }
 

@@ -26,8 +26,8 @@ namespace PAE.Logic
 
 		#region Constants
 
-		public const int DEFAULT_PREVIEW_WIDTH = 1024;
-		public const int DEFAULT_PREVIEW_HEIGHT = 768;
+		public const int DEFAULT_PREVIEW_WIDTH = 800;
+		public const int DEFAULT_PREVIEW_HEIGHT = 600;
 		
 		private const string FORWARD_SLASH = @"/";
 		private const string SIZE_PREFIX = FORWARD_SLASH + "s";
