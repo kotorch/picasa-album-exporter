@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Web;
 using System.Web.Routing;
+using PAE.WebUI.Routes;
 
 namespace PAE.WebUI
 {
@@ -49,9 +50,12 @@ namespace PAE.WebUI
 
 		private static void RegisterRoutes(RouteCollection routeCollection)
 		{
-			Route route = new Route(SelectCultureRouteHandler.URL, new SelectCultureRouteHandler());
-			route.Constraints = new RouteValueDictionary { { SelectCultureRouteHandler.ROUTE_VALUE_CULTURE, SelectCultureRouteHandler.CultureRegex } };
-			routeCollection.Add(SelectCultureRouteHandler.ROUTE_NAME, route);
+            Route expressRoute = new Route(ExpressModeRouteHandler.URL, new ExpressModeRouteHandler());
+            routeCollection.Add(ExpressModeRouteHandler.ROUTE_NAME, expressRoute);
+
+			Route cultureRoute = new Route(SelectCultureRouteHandler.URL, new SelectCultureRouteHandler());
+            cultureRoute.Constraints = new RouteValueDictionary { { SelectCultureRouteHandler.ROUTE_VALUE_CULTURE, SelectCultureRouteHandler.CultureRegex } };
+            routeCollection.Add(SelectCultureRouteHandler.ROUTE_NAME, cultureRoute);
 		}
 
 		#endregion

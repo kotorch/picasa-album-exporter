@@ -56,14 +56,14 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Default.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Code\BasePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="App_Code\SelectCultureRouteHandler.cs" />
+    <Compile Include="App_Code\Routes\ExpressModeRouteHandler.cs" />
+    <Compile Include="App_Code\Routes\SelectCultureRouteHandler.cs" />
     <Compile Include="App_Code\SupportedLanguages.cs" />
     <Compile Include="App_GlobalResources\Strings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -75,6 +75,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Strings.ru.resx</DependentUpon>
     </Compile>
+    <Compile Include="Controls\ExporterControl.ascx.cs">
+      <DependentUpon>ExporterControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\ExporterControl.ascx.designer.cs">
+      <DependentUpon>ExporterControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -82,8 +89,22 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Express.aspx.cs">
+      <DependentUpon>Express.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Express.aspx.designer.cs">
+      <DependentUpon>Express.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Master\PAE.Master.cs">
+      <DependentUpon>PAE.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\PAE.Master.designer.cs">
+      <DependentUpon>PAE.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -116,6 +137,13 @@
       <LastGenOutput>Strings.ru.Designer.cs</LastGenOutput>
       <CustomToolNamespace>Resources</CustomToolNamespace>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\ExporterControl.ascx" />
+    <Content Include="css\pae.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Express.aspx" />
+    <Content Include="Master\PAE.Master" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />

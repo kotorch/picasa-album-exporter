@@ -1,0 +1,110 @@
+﻿.headerSection
+{
+	padding-left: 140px; 
+	width: 610px;
+	margin-bottom: 40px;
+}
+	
+.headerSection h1
+{
+	color: #666666;
+	margin-left: 10px;
+	width: 500px;
+}
+	
+.headerSection h1 sup
+{
+	color:#cccccc;
+	font-size: normal !important;
+}
+
+.headerSection .languageSelector
+{
+	float: right;
+}
+
+.headerSection ul
+{
+	color: Gray;
+}
+
+.headerSection ul li
+{
+	margin-bottom: 2px;
+}
+
+.headerSection ul li div
+{
+	display: inline;
+}
+
+.labelSection
+{
+	width: 140px;
+	color: Gray;
+}
+
+.credentialTextBox
+{
+	width: 150px;
+}
+
+.mainButton
+{
+}
+
+.selectAlbum
+{
+	width: 610px;
+}
+
+.show
+{
+	display: block;
+}
+
+.hide
+{
+	display: none;
+}
+
+.placeholders
+{
+	float: left;
+	width: 70%;
+}
+
+.placeholders .placeholderButton
+{
+	margin: 2px;
+	width: 100px;
+	font-size: xx-small;
+	background: #e0e0e0;
+	border: 1px solid black;
+}
+
+.undoChanges
+{
+	float: right;
+	margin: 2px;
+}
+	
+.imageSizeSection
+{
+	clear: both;
+	padding-top: 7px;
+}
+
+.paeTextArea
+{
+	width: 605px;
+	max-width: 605px;
+	height: 100px;
+	margin-bottom: 7px;
+}
+
+.paeNumericTextBox
+{
+	width: 50px;
+	text-align: right;
+}

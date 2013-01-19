@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Google.GData.Photos;
@@ -34,6 +35,40 @@ namespace PAE.Logic
 
 			return output;
 		}
+
+        public AlbumInfo GetAlbum(string url)
+        {
+            try
+            {
+                int queryStringStart = url.IndexOf("?") + 1;
+                //string queryString = queryStringStart > 0 ? url.Substring(queryStringStart).Replace("#", string.Empty) : string.Empty;
+                //var parameters = System.Web.HttpUtility.ParseQueryString(queryString);
+
+                string albumUrl = queryStringStart > 0 ? url.Substring(0, queryStringStart) : url;
+                int start = albumUrl.IndexOf("picasaweb.google");
+                int userStart = albumUrl.IndexOf("/", start) + 1;
+                int userLength = albumUrl.IndexOf("/", userStart) - userStart;
+                string username = albumUrl.Substring(userStart, userLength);
+
+                int albumStart = userStart + userLength + 1;
+                int albumLength = albumUrl.IndexOfAny(@"/?#".ToCharArray(), albumStart) - albumStart;
+                string albumName = albumLength > 0 ? albumUrl.Substring(albumStart, albumLength) : albumUrl.Substring(albumStart);
+
+                foreach (AlbumInfo album in this.GetAlbums(username, string.Empty))
+                {
+                    if (album.Url.EndsWith(albumName, System.StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        return album;
+                    }
+                }
+
+                throw new Exception();
+            }
+            catch (Exception ex)
+            { 
+                throw new ArgumentException("Album is not found.", ex);
+            }
+        }
 
 		#endregion
 	}

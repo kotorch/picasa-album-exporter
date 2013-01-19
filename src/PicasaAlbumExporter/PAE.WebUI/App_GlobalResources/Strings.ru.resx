@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlbumLink" xml:space="preserve">
+    <value>Ссылка на альбом:</value>
+  </data>
   <data name="By" xml:space="preserve">
     <value>&amp;nbsp;на&amp;nbsp;</value>
   </data>
@@ -132,8 +135,14 @@
   <data name="Export" xml:space="preserve">
     <value>Экспортировать альбом</value>
   </data>
+  <data name="ExpressMode" xml:space="preserve">
+    <value>Экспресс-версия</value>
+  </data>
   <data name="FitImageWithin" xml:space="preserve">
     <value>Уменьшить слишком большие изображения до размера&amp;nbsp;</value>
+  </data>
+  <data name="FullMode" xml:space="preserve">
+    <value>Полная версия</value>
   </data>
   <data name="GetAlbums" xml:space="preserve">
     <value>Получить список альбомов</value>

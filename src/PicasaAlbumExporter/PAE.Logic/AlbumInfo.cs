@@ -12,10 +12,13 @@ namespace PAE.Logic
 
 		public string Title { get; private set; }
 
+        public string Url { get; private set; }
+
 		public AlbumInfo(PicasaEntry album)
 		{
 			this.FeedUri = album.FeedUri;
 			this.Title = album.Title.Text + " [" + album.GetPhotoExtensionValue(GPhotoNameTable.NumPhotos) + "]";
+            this.Url = album.AlternateUri.Content;
 		}
 	}
 }

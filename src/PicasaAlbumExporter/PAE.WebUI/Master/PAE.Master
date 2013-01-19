@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PAE.master.cs" Inherits="PAE.WebUI.Master.PAE" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+
+	<title><asp:Literal ID="LiteralPageTitle" runat="server" Text="<%$ Resources : Strings, PageTitle %>" /></title>
+	
+	<meta name="description" content="<%$ Resources : Strings, MetaDescription %>" />
+	<meta name="keywords" content="<%$ Resources : Strings, MetaKeywords %>" />
+	<meta name="google-site-verification" content="35Bsp2IMv-W4wvfWtLeBlHdy0vZ1u5tODJv450rfEaQ" />
+	<meta name="msvalidate.01" content="465E989B888FE3599826616299E23DE0" />
+
+    <link href="../css/pae.css" rel="Stylesheet" type="text/css" />
+	
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-36896557-1']);
+		_gaq.push(['_trackPageview']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+
+    <asp:ContentPlaceHolder ID="ContentHead" runat="server" />
+
+</head>
+<body>
+
+	<div id="fb-root"></div>
+
+	<script type="text/javascript">
+	    (function(d, s, id) {
+  		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = '//connect.facebook.net/<%= FacebookLocale %>/all.js#xfbml=1';
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+    <form id="PaeForm" runat="server">
+
+        <asp:ContentPlaceHolder ID="ContentHeaderTop" runat="server" />
+
+	    <div class="headerSection">
+		    <div class="languageSelector"><asp:PlaceHolder ID="LanguagesPlaceHolder" runat="server" /></div>
+		    <h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<%$ Resources : Strings, SiteHeader %>" /><sup>&nbsp;&beta;</sup></h1>
+	    </div>
+
+        <asp:ContentPlaceHolder ID="ContentBody" runat="server" />
+
+    </form>
+
+</body>
+</html>

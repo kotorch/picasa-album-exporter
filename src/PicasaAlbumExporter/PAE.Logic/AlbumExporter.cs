@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Google.GData.Photos;
+using Google.GData.Client;
 
 namespace PAE.Logic
 {
@@ -117,7 +118,7 @@ namespace PAE.Logic
 
 		private string GetPhotoCaption(PicasaEntry photo)
 		{
-			string output = photo.Summary.Text.Replace(NEW_LINE, HTML_BREAK);
+			string output = HttpUtility.HtmlAttributeEncode(photo.Summary.Text).Replace(NEW_LINE, HTML_BREAK);
 			return output;
 		}
 
@@ -186,5 +187,5 @@ namespace PAE.Logic
 		}
 
 		#endregion
-	}
+    }
 }

@@ -1,12 +1,11 @@
 ﻿using System;
-
 namespace PAE.WebUI
 {
-    public partial class Default : BasePage
+    public partial class Express : BasePage
     {
         #region Constants
 
-        public const string LANGUAGE_URL_FORMAT = @"~/{0}";
+        public const string LANGUAGE_URL_FORMAT = @"~/exp?" + LANGUAGE_QUERY_NAME + "={0}";
 
         #endregion
 
@@ -19,11 +18,11 @@ namespace PAE.WebUI
 
         #endregion
 
-        #region Event Handlers
+        #region Event Handler
 
-        protected void ExpressModeLink_Click(object sender, EventArgs e)
+        protected void FullModeLink_Click(object sender, EventArgs e)
         {
-            string url = string.Format(Express.LANGUAGE_URL_FORMAT, this.SelectedLanguage);
+            string url = string.Format(Default.LANGUAGE_URL_FORMAT, this.SelectedLanguage);
             this.Response.Redirect(url);
         }
 

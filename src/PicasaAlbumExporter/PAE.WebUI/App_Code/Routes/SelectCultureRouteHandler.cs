@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Web;
-using System.Web.Routing;
 using System.Web.Compilation;
+using System.Web.Routing;
 
-namespace PAE.WebUI
+namespace PAE.WebUI.Routes
 {
 	public class SelectCultureRouteHandler : IRouteHandler
 	{
@@ -38,7 +36,7 @@ namespace PAE.WebUI
 
 		public IHttpHandler GetHttpHandler(RequestContext requestContext)
 		{
-			_Default defaultPage = (_Default) BuildManager.CreateInstanceFromVirtualPath("~/Default.aspx", typeof(_Default));
+			Default defaultPage = (Default) BuildManager.CreateInstanceFromVirtualPath("~/Default.aspx", typeof(Default));
 			defaultPage.SelectedLanguage = requestContext.RouteData.Values[ROUTE_VALUE_CULTURE].ToString().ToLower();
 
 			return defaultPage;
