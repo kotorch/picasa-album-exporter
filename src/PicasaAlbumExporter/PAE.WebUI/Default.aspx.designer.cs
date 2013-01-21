@@ -86,6 +86,15 @@ namespace PAE.WebUI {
         protected global::System.Web.UI.WebControls.Literal LiteralSiteFeature7;
         
         /// <summary>
+        /// LiteralSiteFeature71 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralSiteFeature71;
+        
+        /// <summary>
         /// LiteralSiteFeature8 control.
         /// </summary>
         /// <remarks>

@@ -313,6 +313,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;express mode&lt;/a&gt; to export album by URL.
+        /// </summary>
+        internal static string SiteFeature11 {
+            get {
+                return ResourceManager.GetString("SiteFeature11", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Export &lt;b&gt;unlisted albums&lt;/b&gt; (with a password).
         /// </summary>
         internal static string SiteFeature2 {
