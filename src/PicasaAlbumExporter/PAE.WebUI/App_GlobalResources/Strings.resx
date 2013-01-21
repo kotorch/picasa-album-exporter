@@ -202,7 +202,7 @@
     <value>&amp;nbsp;to your friends</value>
   </data>
   <data name="SiteFeature11" xml:space="preserve">
-    <value>Try &lt;a href="exp"&gt;express mode&lt;/a&gt; to export album by URL</value>
+    <value>Try &lt;a href="exp"&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">
     <value>Export &lt;b&gt;unlisted albums&lt;/b&gt; (with a password)</value>

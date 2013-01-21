@@ -202,7 +202,7 @@
     <value>&amp;nbsp;своим друзьям</value>
   </data>
   <data name="SiteFeature11" xml:space="preserve">
-    <value>Экспортируйте альбом по ссылке с помощью &lt;a href="exp?ln=ru"&gt;экспресс-версии&lt;/a&gt;</value>
+    <value>Экспортируйте &lt;b&gt;альбом по ссылке&lt;/b&gt; с помощью &lt;a href="exp?ln=ru"&gt;Экспресс-версии&lt;/a&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">
     <value>Экспортируйте &lt;b&gt;закрытые альбомы&lt;/b&gt; (с паролем)</value>

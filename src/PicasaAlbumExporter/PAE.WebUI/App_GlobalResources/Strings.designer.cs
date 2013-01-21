@@ -313,7 +313,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;express mode&lt;/a&gt; to export album by URL.
+        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;.
         /// </summary>
         internal static string SiteFeature11 {
             get {
