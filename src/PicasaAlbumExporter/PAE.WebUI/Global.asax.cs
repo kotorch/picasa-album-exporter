@@ -53,7 +53,10 @@ namespace PAE.WebUI
             Route expressRoute = new Route(ExpressModeRouteHandler.URL, new ExpressModeRouteHandler());
             routeCollection.Add(ExpressModeRouteHandler.ROUTE_NAME, expressRoute);
 
-			Route cultureRoute = new Route(SelectCultureRouteHandler.URL, new SelectCultureRouteHandler());
+            Route previewRoute = new Route(PreviewRouteHandler.URL, new PreviewRouteHandler());
+            routeCollection.Add(PreviewRouteHandler.ROUTE_NAME, previewRoute);
+
+            Route cultureRoute = new Route(SelectCultureRouteHandler.URL, new SelectCultureRouteHandler());
             cultureRoute.Constraints = new RouteValueDictionary { { SelectCultureRouteHandler.ROUTE_VALUE_CULTURE, SelectCultureRouteHandler.CultureRegex } };
             routeCollection.Add(SelectCultureRouteHandler.ROUTE_NAME, cultureRoute);
 		}

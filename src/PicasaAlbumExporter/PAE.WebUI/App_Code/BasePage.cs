@@ -2,18 +2,13 @@
 using System.Text.RegularExpressions;
 using System.Threading;
 using System.Web.UI;
+using PAE.WebUI.Properties;
 using PAE.WebUI.Routes;
 
 namespace PAE.WebUI
 {
 	public abstract class BasePage : Page
     {
-        #region Constants
-
-        protected const string LANGUAGE_QUERY_NAME = "ln";
-
-        #endregion
-
         #region Fields
 
         private string m_selectedLanguage;
@@ -52,7 +47,7 @@ namespace PAE.WebUI
 		{
             if (string.IsNullOrEmpty(this.SelectedLanguage))
             {
-                string qsLanguage = this.Request.QueryString[LANGUAGE_QUERY_NAME] ?? string.Empty;
+                string qsLanguage = this.Request.QueryString[Variables.LanguageQueryStringName] ?? string.Empty;
                 
                 if (Regex.IsMatch(qsLanguage, SelectCultureRouteHandler.CultureRegex))
                 {

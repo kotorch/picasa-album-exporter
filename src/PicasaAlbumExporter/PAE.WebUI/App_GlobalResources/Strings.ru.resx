@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlbumIsNotFound" xml:space="preserve">
+    <value>Альбом не найден</value>
+  </data>
   <data name="AlbumLink" xml:space="preserve">
     <value>Ссылка на альбом:</value>
+  </data>
+  <data name="AlbumRetrievalFailed" xml:space="preserve">
+    <value>Ошибка получения альбомов</value>
   </data>
   <data name="By" xml:space="preserve">
     <value>&amp;nbsp;на&amp;nbsp;</value>
@@ -129,11 +135,17 @@
   <data name="EmbedCode" xml:space="preserve">
     <value>Код для вставки:</value>
   </data>
+  <data name="EmptyPreviewHtml" xml:space="preserve">
+    <value>Для предварительного просмотра необходимо экспортировать HTML-код. Попробуйте снова.</value>
+  </data>
   <data name="EnterUsername" xml:space="preserve">
     <value>Имя акаунта:</value>
   </data>
   <data name="Export" xml:space="preserve">
-    <value>Экспортировать альбом</value>
+    <value>Экспортировать</value>
+  </data>
+  <data name="ExportFailed" xml:space="preserve">
+    <value>Ошибка экспортирования</value>
   </data>
   <data name="ExpressMode" xml:space="preserve">
     <value>Экспресс-версия</value>
@@ -189,8 +201,20 @@
   <data name="PlaceholderPicasaUrl" xml:space="preserve">
     <value>Ссылка на страницу изображения в веб-альбоме Picasa</value>
   </data>
+  <data name="PleaseEnterAlbumLink" xml:space="preserve">
+    <value>Введите ссылку на альбом</value>
+  </data>
+  <data name="PleaseEnterUsername" xml:space="preserve">
+    <value>Введите имя аккаунта</value>
+  </data>
+  <data name="PleaseSelectAlbum" xml:space="preserve">
+    <value>Выберите альбом</value>
+  </data>
   <data name="PreviewHtml" xml:space="preserve">
-    <value>Предварительный просмотр полученного HTML-кода...</value>
+    <value>Предварительный просмотр полученного HTML-кода&amp;nbsp;&lt;img src="../img/open_in_new_window.png" /&gt;</value>
+  </data>
+  <data name="PreviewHtmlToolTip" xml:space="preserve">
+    <value>По клику откроется новое окно</value>
   </data>
   <data name="SelectAlbum" xml:space="preserve">
     <value>Выбор альбома:</value>
@@ -199,9 +223,6 @@
     <value>Экспортируйте альбомы из Пикасы в формате &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt; и др.</value>
   </data>
   <data name="SiteFeature10" xml:space="preserve">
-    <value>&amp;nbsp;своим друзьям</value>
-  </data>
-  <data name="SiteFeature11" xml:space="preserve">
     <value>Экспортируйте &lt;b&gt;альбом по ссылке&lt;/b&gt; с помощью &lt;a href="exp?ln=ru"&gt;Экспресс-версии&lt;/a&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">

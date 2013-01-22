@@ -47,36 +47,41 @@ namespace PAE.Logic
 
         public AlbumInfo GetAlbum(string url)
         {
-            try
+            AlbumInfo output = null;
+
+            if (!string.IsNullOrEmpty(url))
             {
-                //int queryStringStart = url.IndexOf("?") + 1;
-                //string queryString = queryStringStart > 0 ? url.Substring(queryStringStart).Replace("#", string.Empty) : string.Empty;
-                //var parameters = System.Web.HttpUtility.ParseQueryString(queryString);
-
-                string albumUrl = url; //queryStringStart > 0 ? url.Substring(0, queryStringStart) : url;
-                int start = albumUrl.IndexOf(PICASAWEB_DOT_GOOGLE);
-                int userStart = albumUrl.IndexOf(SLASH, start) + 1;
-                int userLength = albumUrl.IndexOf(SLASH, userStart) - userStart;
-                string username = albumUrl.Substring(userStart, userLength);
-
-                int albumStart = userStart + userLength + 1;
-                int albumLength = albumUrl.IndexOfAny(ALBUM_NAME_TERMINATORS.ToCharArray(), albumStart) - albumStart;
-                string albumName = albumLength > 0 ? albumUrl.Substring(albumStart, albumLength) : albumUrl.Substring(albumStart);
-
-                foreach (AlbumInfo album in this.GetAlbums(username, string.Empty))
+                try
                 {
-                    if (album.Url.EndsWith(albumName, System.StringComparison.InvariantCultureIgnoreCase))
+                    //int queryStringStart = url.IndexOf("?") + 1;
+                    //string queryString = queryStringStart > 0 ? url.Substring(queryStringStart).Replace("#", string.Empty) : string.Empty;
+                    //var parameters = System.Web.HttpUtility.ParseQueryString(queryString);
+
+                    string albumUrl = url; //queryStringStart > 0 ? url.Substring(0, queryStringStart) : url;
+                    int start = albumUrl.IndexOf(PICASAWEB_DOT_GOOGLE);
+                    int userStart = albumUrl.IndexOf(SLASH, start) + 1;
+                    int userLength = albumUrl.IndexOf(SLASH, userStart) - userStart;
+                    string username = albumUrl.Substring(userStart, userLength);
+
+                    int albumStart = userStart + userLength + 1;
+                    int albumLength = albumUrl.IndexOfAny(ALBUM_NAME_TERMINATORS.ToCharArray(), albumStart) - albumStart;
+                    string albumName = albumLength > 0 ? albumUrl.Substring(albumStart, albumLength) : albumUrl.Substring(albumStart);
+
+                    foreach (AlbumInfo album in this.GetAlbums(username, string.Empty))
                     {
-                        return album;
+                        if (album.Url.EndsWith(albumName, System.StringComparison.InvariantCultureIgnoreCase))
+                        {
+                            output = album;
+                        }
                     }
                 }
+                catch
+                {
+                    //throw new ArgumentException(string.Format(ALBUM_NOT_FOUND_FORMAT, ex.Message));
+                }
+            }
 
-                throw new Exception(string.Empty);
-            }
-            catch (Exception ex)
-            {
-                throw new ArgumentException(string.Format(ALBUM_NOT_FOUND_FORMAT, ex.Message));
-            }
+            return output;
         }
 
 		#endregion

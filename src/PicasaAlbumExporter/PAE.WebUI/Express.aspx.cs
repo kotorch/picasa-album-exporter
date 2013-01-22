@@ -1,11 +1,13 @@
 ﻿using System;
+using PAE.WebUI.Properties;
+
 namespace PAE.WebUI
 {
     public partial class Express : BasePage
     {
         #region Constants
 
-        public const string LANGUAGE_URL_FORMAT = @"~/exp?" + LANGUAGE_QUERY_NAME + "={0}";
+        public static readonly string LANGUAGE_URL_FORMAT = @"~/exp?" + Variables.LanguageQueryStringName + "={0}";
 
         #endregion
 

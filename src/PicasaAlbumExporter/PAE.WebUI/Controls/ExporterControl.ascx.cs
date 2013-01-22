@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web.UI;
 using PAE.Logic;
+using PAE.WebUI.Properties;
 using Resources;
 
 namespace PAE.WebUI.Controls
@@ -30,6 +31,8 @@ namespace PAE.WebUI.Controls
         private const string ON_FOCUS_SCRIPT = "javascript:this.select();";
         private const string PLACEHOLDER_BUTTON_FORMAT = "<button class=\"placeholderButton\" id=\"btn_{0}\" title=\"{1}\""
                                                        + " onclick=\"InsertPlaceholder('{2}'); return false;\">{3}</button>";
+
+        private readonly string PREVIEW_OUTPUT_FORMAT = "<script>window.open('preview?" + Variables.LanguageQueryStringName + "={0}','_blank');</script>";
 
         #endregion
 
@@ -69,6 +72,15 @@ namespace PAE.WebUI.Controls
             }
         }
 
+        private BasePage CurrentPage
+        {
+            get
+            {
+                BasePage output = (BasePage)this.Page;
+                return output;
+            }
+        }
+
         #endregion
 
         #region Event Handlers
@@ -87,7 +99,9 @@ namespace PAE.WebUI.Controls
 
             this.PlaceholdersLiteral.Text = this.BuildPlaceholdersHtml();
             this.ResultTextBox.Attributes[ON_FOCUS_ATTRIBUTE] = ON_FOCUS_SCRIPT;
-            this.SetMessage(string.Empty, Color.Black);
+
+            this.GetAlbumsErrorLabel.Text = string.Empty;
+            this.ExportErrorLabel.Text = string.Empty;
         }
 
         protected void IncludePrivateCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -110,18 +124,25 @@ namespace PAE.WebUI.Controls
         protected void GetAlbumsButton_Click(object sender, EventArgs e)
         {
             IEnumerable<AlbumInfo> albumsData = null;
+            string username = this.UsernameTextBox.Text.Trim();
 
-            try
+            if (string.IsNullOrEmpty(username))
             {
-                string username = this.UsernameTextBox.Text.Trim();
-                string password = this.PasswordTextBox.Text;
-
-                AlbumSelector provider = new AlbumSelector();
-                albumsData = provider.GetAlbums(username, password);
+                this.GetAlbumsErrorLabel.Text = Strings.PleaseEnterUsername;
             }
-            catch (Exception ex)
+            else
             {
-                this.SetMessage(ex.Message, Color.Red);
+                try
+                {
+                    string password = this.PasswordTextBox.Text;
+
+                    AlbumSelector provider = new AlbumSelector();
+                    albumsData = provider.GetAlbums(username, password);
+                }
+                catch
+                {
+                    this.GetAlbumsErrorLabel.Text = Strings.AlbumRetrievalFailed;
+                }
             }
 
             if (albumsData != null && albumsData.Any())
@@ -152,42 +173,66 @@ namespace PAE.WebUI.Controls
 
         protected void ExportButton_Click(object sender, EventArgs e)
         {
+            string feedUri;
+
+            switch (this.Mode)
+            {
+                case ExporterMode.AlbumLink:
+
+                    if (string.IsNullOrEmpty(this.AlbumLinkTextBox.Text))
+                    {
+                        this.ExportErrorLabel.Text = Strings.PleaseEnterAlbumLink;
+                        return;
+                    }
+
+                    AlbumSelector selector = new AlbumSelector();
+                    AlbumInfo info = selector.GetAlbum(this.AlbumLinkTextBox.Text);
+
+                    if (info == null)
+                    {
+                        this.ExportErrorLabel.Text = Strings.AlbumIsNotFound;
+                        return;
+                    }
+                    else
+                    {
+                        feedUri = info.FeedUri;
+                    }
+
+                    break;
+
+                default:
+
+                    feedUri = this.AlbumDropDownList.SelectedValue;
+
+                    break;
+            }
+
+            if (string.IsNullOrEmpty(feedUri))
+            {
+                this.ExportErrorLabel.Text = Strings.PleaseSelectAlbum;
+                return;
+            }
+
             try
             {
-                string feedUri;
                 string template = this.TemplateTextBox.Text;
                 int width = int.Parse(this.WidthTextBox.Text);
                 int height = int.Parse(this.HeightTextBox.Text);
-
-                switch (this.Mode)
-                {
-                    case ExporterMode.AlbumLink:
-
-                        AlbumSelector selector = new AlbumSelector();
-                        feedUri = selector.GetAlbum(this.AlbumLinkTextBox.Text).FeedUri;
-
-                        break;
-
-                    default:
-
-                        feedUri = this.AlbumDropDownList.SelectedValue;
-
-                        break;
-                }
-
                 AlbumExporter provider = new AlbumExporter();
                 this.ResultTextBox.Text = provider.ExportAlbum(feedUri, template, width, height);
                 this.ResultTextBox.Focus();
             }
-            catch (Exception ex)
+            catch
             {
-                this.SetMessage(ex.Message, Color.Red);
+                this.ExportErrorLabel.Text = Strings.ExportFailed;
             }
         }
 
         protected void PreviewLink_Click(object sender, EventArgs e)
         {
-            this.PreviewLiteral.Text = this.ResultTextBox.Text;
+            this.Session[Variables.PreviewHtmlSessionName] = this.ResultTextBox.Text;
+            string output = string.Format(PREVIEW_OUTPUT_FORMAT, this.CurrentPage.SelectedLanguage);
+            this.Response.Write(output);
         }
 
         #endregion
@@ -262,12 +307,6 @@ namespace PAE.WebUI.Controls
             string output = html.ToString();
 
             return output;
-        }
-
-        private void SetMessage(string message, Color color)
-        {
-            this.MessageLabel.Text = message;
-            this.MessageLabel.ForeColor = color;
         }
 
         #endregion

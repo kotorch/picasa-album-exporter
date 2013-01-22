@@ -1,6 +1,6 @@
 ﻿.headerSection
 {
-	padding-left: 140px; 
+	padding-left: 150px; 
 	width: 610px;
 	margin-bottom: 40px;
 }
@@ -30,7 +30,12 @@
 
 .headerSection ul li
 {
-	margin-bottom: 2px;
+	margin-bottom: 3px;
+}
+
+.headerSection ul li .fb-like
+{
+    max-height: 19px !important;
 }
 
 .headerSection ul li div
@@ -38,9 +43,14 @@
 	display: inline;
 }
 
+.mainTable
+{
+    width: 770px;
+}
+
 .labelSection
 {
-	width: 140px;
+	width: 150px;
 	color: Gray;
 }
 
@@ -107,4 +117,15 @@
 {
 	width: 50px;
 	text-align: right;
+}
+
+.errorMessage
+{
+    color: Red;
+}
+
+a img
+{
+    border-style: none;    
+    vertical-align: text-bottom;
 }

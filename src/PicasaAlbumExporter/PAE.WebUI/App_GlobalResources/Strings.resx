@@ -117,8 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlbumIsNotFound" xml:space="preserve">
+    <value>Album is not found</value>
+  </data>
   <data name="AlbumLink" xml:space="preserve">
     <value>Album link:</value>
+  </data>
+  <data name="AlbumRetrievalFailed" xml:space="preserve">
+    <value>Album retrieval failed</value>
   </data>
   <data name="By" xml:space="preserve">
     <value>&amp;nbsp;&amp;nbsp;x&amp;nbsp;&amp;nbsp;</value>
@@ -129,11 +135,17 @@
   <data name="EmbedCode" xml:space="preserve">
     <value>Embed code:</value>
   </data>
+  <data name="EmptyPreviewHtml" xml:space="preserve">
+    <value>There is nothing to preview. Please export some HTML and try again.</value>
+  </data>
   <data name="EnterUsername" xml:space="preserve">
     <value>Enter username:</value>
   </data>
   <data name="Export" xml:space="preserve">
     <value>Export</value>
+  </data>
+  <data name="ExportFailed" xml:space="preserve">
+    <value>Export failed</value>
   </data>
   <data name="ExpressMode" xml:space="preserve">
     <value>Express Mode</value>
@@ -189,8 +201,20 @@
   <data name="PlaceholderPicasaUrl" xml:space="preserve">
     <value>Link to the photo page on Picasa website</value>
   </data>
+  <data name="PleaseEnterAlbumLink" xml:space="preserve">
+    <value>Please enter album link</value>
+  </data>
+  <data name="PleaseEnterUsername" xml:space="preserve">
+    <value>Please enter username</value>
+  </data>
+  <data name="PleaseSelectAlbum" xml:space="preserve">
+    <value>Please select album</value>
+  </data>
   <data name="PreviewHtml" xml:space="preserve">
-    <value>Preview generated HTML...</value>
+    <value>Preview generated HTML&amp;nbsp;&lt;img src="../img/open_in_new_window.png" /&gt;</value>
+  </data>
+  <data name="PreviewHtmlToolTip" xml:space="preserve">
+    <value>This will open a new window</value>
   </data>
   <data name="SelectAlbum" xml:space="preserve">
     <value>Select album:</value>
@@ -199,9 +223,6 @@
     <value>Export Picasa web albums as &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt;, etc.</value>
   </data>
   <data name="SiteFeature10" xml:space="preserve">
-    <value>&amp;nbsp;to your friends</value>
-  </data>
-  <data name="SiteFeature11" xml:space="preserve">
     <value>Try &lt;a href="exp"&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">

@@ -61,11 +61,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Album is not found.
+        /// </summary>
+        internal static string AlbumIsNotFound {
+            get {
+                return ResourceManager.GetString("AlbumIsNotFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Album link:.
         /// </summary>
         internal static string AlbumLink {
             get {
                 return ResourceManager.GetString("AlbumLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Album retrieval failed.
+        /// </summary>
+        internal static string AlbumRetrievalFailed {
+            get {
+                return ResourceManager.GetString("AlbumRetrievalFailed", resourceCulture);
             }
         }
         
@@ -97,6 +115,15 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There is nothing to preview. Please export some HTML and try again..
+        /// </summary>
+        internal static string EmptyPreviewHtml {
+            get {
+                return ResourceManager.GetString("EmptyPreviewHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Enter username:.
         /// </summary>
         internal static string EnterUsername {
@@ -111,6 +138,15 @@ namespace Resources {
         internal static string Export {
             get {
                 return ResourceManager.GetString("Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Export failed.
+        /// </summary>
+        internal static string ExportFailed {
+            get {
+                return ResourceManager.GetString("ExportFailed", resourceCulture);
             }
         }
         
@@ -277,11 +313,47 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Preview generated HTML....
+        ///   Looks up a localized string similar to Please enter album link.
+        /// </summary>
+        internal static string PleaseEnterAlbumLink {
+            get {
+                return ResourceManager.GetString("PleaseEnterAlbumLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please enter username.
+        /// </summary>
+        internal static string PleaseEnterUsername {
+            get {
+                return ResourceManager.GetString("PleaseEnterUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select album.
+        /// </summary>
+        internal static string PleaseSelectAlbum {
+            get {
+                return ResourceManager.GetString("PleaseSelectAlbum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Preview generated HTML&amp;nbsp;&lt;img src=&quot;../img/open_in_new_window.png&quot; /&gt;.
         /// </summary>
         internal static string PreviewHtml {
             get {
                 return ResourceManager.GetString("PreviewHtml", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to This will open a new window.
+        /// </summary>
+        internal static string PreviewHtmlToolTip {
+            get {
+                return ResourceManager.GetString("PreviewHtmlToolTip", resourceCulture);
             }
         }
         
@@ -304,20 +376,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &amp;nbsp;to your friends.
+        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;.
         /// </summary>
         internal static string SiteFeature10 {
             get {
                 return ResourceManager.GetString("SiteFeature10", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;.
-        /// </summary>
-        internal static string SiteFeature11 {
-            get {
-                return ResourceManager.GetString("SiteFeature11", resourceCulture);
             }
         }
         

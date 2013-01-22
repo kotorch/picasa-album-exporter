@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ExporterControl.ascx.cs" Inherits="PAE.WebUI.Controls.ExporterControl" %>
 
 <div>
-	<table width="760px" cellspacing="7px">
+	<table class="mainTable" cellspacing="7px">
 		<tbody>
 		    <asp:PlaceHolder ID="FullModePlaceHolder" runat="server">
 			    <tr>
@@ -9,7 +9,7 @@
 				    <td>
 					    <asp:TextBox ID="UsernameTextBox" runat="server" CssClass="credentialTextBox"></asp:TextBox>
 					    <asp:CheckBox ID="IncludePrivateCheckBox" runat="server"  AutoPostBack="True" 
-						    OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />
+						    OnCheckedChanged="IncludePrivateCheckBox_CheckedChanged" />&nbsp;
 					    <asp:TextBox ID="PasswordTextBox" runat="server" CssClass="credentialTextBox" ToolTip="Password" TextMode="Password">
 					    </asp:TextBox>
 				    </td>
@@ -19,6 +19,8 @@
 				    <td>
 					    <asp:Button ID="GetAlbumsButton" runat="server" CssClass="mainButton"
 						    Text="<%$ Resources : Strings, GetAlbums %>" OnClick="GetAlbumsButton_Click" />
+						    &nbsp;
+						    <asp:Label ID="GetAlbumsErrorLabel" runat="server" CssClass="errorMessage" />
 				    </td>
 			    </tr>
 			    <tr>
@@ -67,6 +69,8 @@
 				<td>
 					<asp:Button ID="ExportButton" runat="server" CssClass="mainButton" 
 						Text="<%$ Resources : Strings, Export %>" OnClick="ExportButton_Click" />
+				    &nbsp;
+				    <asp:Label ID="ExportErrorLabel" runat="server" CssClass="errorMessage" />
 				</td>
 			</tr>
 			<tr>
@@ -79,22 +83,12 @@
 			<tr>
 				<td></td>
 				<td>
-					<asp:LinkButton ID="PreviewLink" runat="server" 
-						Text="<%$ Resources : Strings, PreviewHtml %>" OnClick="PreviewLink_Click" />
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<asp:Label ID="MessageLabel" runat="server">
-					</asp:Label>
+					<asp:LinkButton ID="PreviewLink" runat="server" OnClick="PreviewLink_Click" 
+					    ToolTip="<%$ Resources : Strings, PreviewHtmlToolTip %>" Text="<%$ Resources : Strings, PreviewHtml %>" />
 				</td>
 			</tr>
 		</tbody>
 	</table>
-</div>
-<div>
-	<asp:Literal ID="PreviewLiteral" runat="server" />
 </div>
 
 <script type="text/javascript">

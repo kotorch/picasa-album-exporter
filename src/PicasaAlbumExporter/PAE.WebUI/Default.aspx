@@ -21,11 +21,11 @@
 			<li><asp:Literal ID="LiteralSiteFeature5" runat="server" Text="<%$ Resources : Strings, SiteFeature5 %>" /></li>
 			<li><asp:Literal ID="LiteralSiteFeature6" runat="server" Text="<%$ Resources : Strings, SiteFeature6 %>" /></li>
 			<li><asp:Literal ID="LiteralSiteFeature7" runat="server" Text="<%$ Resources : Strings, SiteFeature7 %>" /></li>
-			<li><asp:Literal ID="LiteralSiteFeature71" runat="server" Text="<%$ Resources : Strings, SiteFeature11 %>" /></li>
+			<li><asp:Literal ID="LiteralSiteFeature10" runat="server" Text="<%$ Resources : Strings, SiteFeature10 %>" /></li>
 			<li><asp:Literal ID="LiteralSiteFeature8" runat="server" Text="<%$ Resources : Strings, SiteFeature8 %>" /></li>
 			<li>
 				<asp:Literal ID="LiteralSiteFeature9" runat="server" Text="<%$ Resources : Strings, SiteFeature9 %>" />
-				<div class="fb-like" data-href='<%= "http://picasaalbumexporter.apphb.com/" + SelectedLanguage %>' data-send="false" data-layout="button_count" data-width="450" data-show-faces="false"></div>
+				<div class="fb-like" data-href='http://picasaalbumexporter.apphb.com/' data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
 			</li>
 		</ul>
 	</div>

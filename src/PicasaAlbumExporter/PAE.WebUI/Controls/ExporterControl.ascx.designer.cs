@@ -68,6 +68,15 @@ namespace PAE.WebUI.Controls {
         protected global::System.Web.UI.WebControls.Button GetAlbumsButton;
         
         /// <summary>
+        /// GetAlbumsErrorLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label GetAlbumsErrorLabel;
+        
+        /// <summary>
         /// LiteralSelectAlbum control.
         /// </summary>
         /// <remarks>
@@ -212,6 +221,15 @@ namespace PAE.WebUI.Controls {
         protected global::System.Web.UI.WebControls.Button ExportButton;
         
         /// <summary>
+        /// ExportErrorLabel control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ExportErrorLabel;
+        
+        /// <summary>
         /// LiteralEmbedCode control.
         /// </summary>
         /// <remarks>
@@ -237,23 +255,5 @@ namespace PAE.WebUI.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton PreviewLink;
-        
-        /// <summary>
-        /// MessageLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label MessageLabel;
-        
-        /// <summary>
-        /// PreviewLiteral control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal PreviewLiteral;
     }
 }
