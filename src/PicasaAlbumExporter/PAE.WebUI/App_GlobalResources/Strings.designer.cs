@@ -223,7 +223,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to google, picasa, album, export, convert, html, xml, bbcode, caption, photo, image, publish, embed, blog.
+        ///   Looks up a localized string similar to google,picasa,album,export,convert,html,caption,publish,embed,blog,blogger,wordpress,livejournal,xml,bbcode,photo,image.
         /// </summary>
         internal static string MetaKeywords {
             get {
