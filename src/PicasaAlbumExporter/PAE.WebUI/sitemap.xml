@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>http://picasaalbumexporter.apphb.com</loc>
-   </url>
 	<url>
-		<loc>http://picasaalbumexporter.apphb.com/en</loc>
+		<loc>http://picasaalbumexporter.apphb.com</loc>
 	</url>
 	<url>
 		<loc>http://picasaalbumexporter.apphb.com/ru</loc>
 	</url>
-  <url>
-    <loc>http://picasaalbumexporter.apphb.com/exp</loc>
-  </url>
+	<url>
+		<loc>http://picasaalbumexporter.apphb.com/exp</loc>
+	</url>
 </urlset>
