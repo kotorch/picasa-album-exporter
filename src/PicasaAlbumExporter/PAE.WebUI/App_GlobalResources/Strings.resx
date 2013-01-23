@@ -216,6 +216,9 @@
   <data name="PreviewHtmlToolTip" xml:space="preserve">
     <value>This will open a new window</value>
   </data>
+  <data name="PreviewPageTitle" xml:space="preserve">
+    <value>Picasa Web Album Exporter - Preview</value>
+  </data>
   <data name="SelectAlbum" xml:space="preserve">
     <value>Select album:</value>
   </data>

@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
+    <title><asp:Literal ID="LiteralPageTitle" runat="server" Text="<%$ Resources : Strings, PreviewPageTitle %>" /></title>
 </head>
 <body>
 </body>

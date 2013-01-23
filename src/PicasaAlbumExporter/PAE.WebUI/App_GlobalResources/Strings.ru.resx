@@ -216,6 +216,9 @@
   <data name="PreviewHtmlToolTip" xml:space="preserve">
     <value>По клику откроется новое окно</value>
   </data>
+  <data name="PreviewPageTitle" xml:space="preserve">
+    <value>Экспорт веб-альбомов Picasa - Предварительный просмотр</value>
+  </data>
   <data name="SelectAlbum" xml:space="preserve">
     <value>Выбор альбома:</value>
   </data>
