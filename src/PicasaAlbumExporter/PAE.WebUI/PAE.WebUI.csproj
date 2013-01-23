@@ -120,7 +120,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="css\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="sitemap.xml" />
     <Content Include="Web.Release.config" />
@@ -147,6 +146,8 @@
     <Content Include="Controls\ExporterControl.ascx" />
     <Content Include="css\pae.css" />
     <Content Include="Default.aspx" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\favicon.png" />
     <Content Include="img\google_user.png" />
     <Content Include="img\open_in_new_window.png" />
     <Content Include="img\picasa.png" />

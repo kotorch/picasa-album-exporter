@@ -35,7 +35,7 @@
 
 .headerSection ul li .fb-like
 {
-    max-height: 19px !important;
+    max-height: 20px !important;
 }
 
 .headerSection ul li div
@@ -63,7 +63,7 @@
     padding: 0;
     margin-right: 3px;
     margin-left: 5px;
-    vertical-align: text-top;
+    vertical-align: text-top !important;
 }
 
 .labelSection
