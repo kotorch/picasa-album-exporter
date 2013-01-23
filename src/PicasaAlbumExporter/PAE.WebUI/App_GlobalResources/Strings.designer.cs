@@ -214,7 +214,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The simplest and the most flexible way to export Google Picasa albums as HTML to publish in your blog. Allows you to include photo captions, custom size images and other information. .
+        ///   Looks up a localized string similar to The simplest and the most flexible way to publish Picasa web albums in your blog. Allows you to include photo captions, custom size images and other information. Export, embed and share..
         /// </summary>
         internal static string MetaDescription {
             get {
@@ -223,7 +223,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to google,picasa,album,export,convert,html,caption,publish,embed,blog,blogger,wordpress,livejournal,xml,bbcode,photo,image.
+        ///   Looks up a localized string similar to google,picasa,web,album,export,convert,publish,embed,share,post,html,caption,photo,image,blog,blogger,wordpress,livejournal,xml,bbcode.
         /// </summary>
         internal static string MetaKeywords {
             get {
