@@ -250,7 +250,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picasa Web Album Exporter, Share Picasa Albums as HTML with Captions, Publish Picasa Album in Your Blog.
+        ///   Looks up a localized string similar to Picasa Album Exporter, Share Picasa Web Albums as HTML with Captions, Publish Picasa Album in Your Blog.
         /// </summary>
         internal static string PageTitle {
             get {
