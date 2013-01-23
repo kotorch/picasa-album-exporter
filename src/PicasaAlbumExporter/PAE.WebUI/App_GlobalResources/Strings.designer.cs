@@ -97,6 +97,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to By album link.
+        /// </summary>
+        internal static string ByAlbumLink {
+            get {
+                return ResourceManager.GetString("ByAlbumLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By username.
+        /// </summary>
+        internal static string ByUsername {
+            get {
+                return ResourceManager.GetString("ByUsername", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit template....
         /// </summary>
         internal static string EditTemplate {
@@ -151,11 +169,11 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Express Mode.
+        ///   Looks up a localized string similar to Export mode:.
         /// </summary>
-        internal static string ExpressMode {
+        internal static string ExportMode {
             get {
-                return ResourceManager.GetString("ExpressMode", resourceCulture);
+                return ResourceManager.GetString("ExportMode", resourceCulture);
             }
         }
         
@@ -165,15 +183,6 @@ namespace Resources {
         internal static string FitImageWithin {
             get {
                 return ResourceManager.GetString("FitImageWithin", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Full Site.
-        /// </summary>
-        internal static string FullMode {
-            get {
-                return ResourceManager.GetString("FullMode", resourceCulture);
             }
         }
         
@@ -241,7 +250,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog.
+        ///   Looks up a localized string similar to Picasa Web Album Exporter, Share Picasa Albums as HTML with Captions, Publish Picasa Album in Your Blog.
         /// </summary>
         internal static string PageTitle {
             get {
@@ -381,15 +390,6 @@ namespace Resources {
         internal static string SiteFeature1 {
             get {
                 return ResourceManager.GetString("SiteFeature1", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Try &lt;a href=&quot;exp&quot;&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;.
-        /// </summary>
-        internal static string SiteFeature10 {
-            get {
-                return ResourceManager.GetString("SiteFeature10", resourceCulture);
             }
         }
         

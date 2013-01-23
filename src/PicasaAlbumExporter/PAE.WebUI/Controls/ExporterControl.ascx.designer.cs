@@ -14,13 +14,58 @@ namespace PAE.WebUI.Controls {
     public partial class ExporterControl {
         
         /// <summary>
-        /// FullModePlaceHolder control.
+        /// LiteralExporterMode control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder FullModePlaceHolder;
+        protected global::System.Web.UI.WebControls.Literal LiteralExporterMode;
+        
+        /// <summary>
+        /// ExportModeMenu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Menu ExportModeMenu;
+        
+        /// <summary>
+        /// AlbumLinkModePlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder AlbumLinkModePlaceHolder;
+        
+        /// <summary>
+        /// LiteralAlbumLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal LiteralAlbumLink;
+        
+        /// <summary>
+        /// AlbumLinkTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AlbumLinkTextBox;
+        
+        /// <summary>
+        /// UsernameModePlaceHolder control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder UsernameModePlaceHolder;
         
         /// <summary>
         /// LiteralEnterUsername control.
@@ -93,33 +138,6 @@ namespace PAE.WebUI.Controls {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList AlbumDropDownList;
-        
-        /// <summary>
-        /// ExpressModePlaceHolder control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder ExpressModePlaceHolder;
-        
-        /// <summary>
-        /// LiteralAlbumLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal LiteralAlbumLink;
-        
-        /// <summary>
-        /// AlbumLinkTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AlbumLinkTextBox;
         
         /// <summary>
         /// ToggleEditorLink control.

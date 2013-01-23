@@ -129,6 +129,12 @@
   <data name="By" xml:space="preserve">
     <value>&amp;nbsp;на&amp;nbsp;</value>
   </data>
+  <data name="ByAlbumLink" xml:space="preserve">
+    <value>По ссылке на альбом</value>
+  </data>
+  <data name="ByUsername" xml:space="preserve">
+    <value>По имени аккаунта</value>
+  </data>
   <data name="EditTemplate" xml:space="preserve">
     <value>Редактировать шаблон...</value>
   </data>
@@ -147,14 +153,11 @@
   <data name="ExportFailed" xml:space="preserve">
     <value>Ошибка экспортирования</value>
   </data>
-  <data name="ExpressMode" xml:space="preserve">
-    <value>Экспресс-версия</value>
+  <data name="ExportMode" xml:space="preserve">
+    <value>Режим экспорта:</value>
   </data>
   <data name="FitImageWithin" xml:space="preserve">
     <value>Уменьшить слишком большие изображения до размера&amp;nbsp;</value>
-  </data>
-  <data name="FullMode" xml:space="preserve">
-    <value>Полная версия</value>
   </data>
   <data name="GetAlbums" xml:space="preserve">
     <value>Получить список альбомов</value>
@@ -224,9 +227,6 @@
   </data>
   <data name="SiteFeature1" xml:space="preserve">
     <value>Экспортируйте альбомы из Пикасы в формате &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt; и др.</value>
-  </data>
-  <data name="SiteFeature10" xml:space="preserve">
-    <value>Экспортируйте &lt;b&gt;альбом по ссылке&lt;/b&gt; с помощью &lt;a href="exp?ln=ru"&gt;Экспресс-версии&lt;/a&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">
     <value>Экспортируйте &lt;b&gt;закрытые альбомы&lt;/b&gt; (с паролем)</value>

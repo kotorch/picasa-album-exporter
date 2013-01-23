@@ -3,7 +3,29 @@
 <div>
 	<table class="mainTable" cellspacing="7px">
 		<tbody>
-		    <asp:PlaceHolder ID="FullModePlaceHolder" runat="server">
+		    <tr>
+		        <td class="labelSection"><asp:Literal ID="LiteralExporterMode" runat="server" Text="<%$ Resources : Strings, ExportMode %>" /></td>
+		        <td class="exportMode">
+		            <asp:Menu ID="ExportModeMenu" runat="server" Orientation="Horizontal" 
+		                OnMenuItemClick="ExportModeMenu_MenuItemClick" DynamicVerticalOffset="0">
+		                <StaticMenuItemStyle CssClass="menuItem" />
+		                <StaticSelectedStyle Font-Bold="true" />
+		                <Items>
+		                    <asp:MenuItem Value="AlbumLink" Text="<%$ Resources : Strings, ByAlbumLink %>" ImageUrl="~/img/picasa.png" Selected="True" />
+		                    <asp:MenuItem Value="Username" Text="<%$ Resources : Strings, ByUsername %>" ImageUrl="~/img/google_user.png" />
+		                </Items>
+		            </asp:Menu>
+		        </td>
+		    </tr>
+			<asp:PlaceHolder ID="AlbumLinkModePlaceHolder" runat="server" Visible="false">
+			    <tr>
+			        <td class="labelSection"><asp:Literal ID="LiteralAlbumLink" runat="server" Text="<%$ Resources : Strings, AlbumLink %>" /></td>
+			        <td>
+			            <asp:TextBox ID="AlbumLinkTextBox" runat="server" CssClass="selectAlbum"></asp:TextBox>
+			        </td>
+			    </tr>
+			</asp:PlaceHolder>
+		    <asp:PlaceHolder ID="UsernameModePlaceHolder" runat="server">
 			    <tr>
 				    <td class="labelSection"><asp:Literal ID="LiteralEnterUsername" runat="server" Text="<%$ Resources : Strings, EnterUsername %>" /></td>
 				    <td>
@@ -29,14 +51,6 @@
 					    <asp:DropDownList ID="AlbumDropDownList" runat="server" CssClass="selectAlbum">
 					    </asp:DropDownList>
 				    </td>
-			    </tr>
-			</asp:PlaceHolder>
-			<asp:PlaceHolder ID="ExpressModePlaceHolder" runat="server" Visible="false">
-			    <tr>
-			        <td class="labelSection"><asp:Literal ID="LiteralAlbumLink" runat="server" Text="<%$ Resources : Strings, AlbumLink %>" /></td>
-			        <td>
-			            <asp:TextBox ID="AlbumLinkTextBox" runat="server" CssClass="selectAlbum"></asp:TextBox>
-			        </td>
 			    </tr>
 			</asp:PlaceHolder>
 		    <tr>
@@ -83,7 +97,7 @@
 			<tr>
 				<td></td>
 				<td>
-					<asp:LinkButton ID="PreviewLink" runat="server" OnClick="PreviewLink_Click" 
+					<asp:LinkButton ID="PreviewLink" runat="server" CssClass="preview" OnClick="PreviewLink_Click" 
 					    ToolTip="<%$ Resources : Strings, PreviewHtmlToolTip %>" Text="<%$ Resources : Strings, PreviewHtml %>" />
 				</td>
 			</tr>

@@ -49,6 +49,21 @@
 	    <div class="headerSection">
 		    <div class="languageSelector"><asp:PlaceHolder ID="LanguagesPlaceHolder" runat="server" /></div>
 		    <h1><asp:Literal ID="LiteralSiteHeader" runat="server" Text="<%$ Resources : Strings, SiteHeader %>" /><sup>&nbsp;&beta;</sup></h1>
+		    <br />
+		    <ul>
+			    <li><asp:Literal ID="LiteralSiteFeature1" runat="server" Text="<%$ Resources : Strings, SiteFeature1 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature2" runat="server" Text="<%$ Resources : Strings, SiteFeature2 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature3" runat="server" Text="<%$ Resources : Strings, SiteFeature3 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature4" runat="server" Text="<%$ Resources : Strings, SiteFeature4 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature5" runat="server" Text="<%$ Resources : Strings, SiteFeature5 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature6" runat="server" Text="<%$ Resources : Strings, SiteFeature6 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature7" runat="server" Text="<%$ Resources : Strings, SiteFeature7 %>" /></li>
+			    <li><asp:Literal ID="LiteralSiteFeature8" runat="server" Text="<%$ Resources : Strings, SiteFeature8 %>" /></li>
+			    <li>
+				    <asp:Literal ID="LiteralSiteFeature9" runat="server" Text="<%$ Resources : Strings, SiteFeature9 %>" />
+				    <div class="fb-like" data-href='http://picasaalbumexporter.apphb.com/' data-send="false" data-layout="button_count" data-width="200" data-show-faces="false"></div>
+			    </li>
+		    </ul>
 	    </div>
 
         <asp:ContentPlaceHolder ID="ContentBody" runat="server" />

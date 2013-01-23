@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Web.UI;
+using System.Web.UI.WebControls;
 using PAE.Logic;
 using PAE.WebUI.Properties;
 using Resources;
@@ -22,11 +22,10 @@ namespace PAE.WebUI.Controls
         private const string DELIMITER_LITERAL_TEXT = "&nbsp;|&nbsp;";
         private const string LANGUAGE_CTRL_ID_FORMAT = "{0}LanguageControl";
         private const string LANGUAGE_LINK_URL_FORMAT = @"~/{0}";
-        private const string EXPRESS_MODE_URL = @"~/exp";
         private const string ALBUM_DATA_TEXT_FIELD = "Title";
         private const string ALBUM_DATA_VALUE_FIELD = "FeedUri";
-        private const string HIDE_EDITOR_CSS = "hide";
-        private const string SHOW_EDITOR_CSS = "show";
+        private const string HIDE_EDITOR_CSS = "templateEditorHide";
+        private const string SHOW_EDITOR_CSS = "templateEditorShow";
         private const string ON_FOCUS_ATTRIBUTE = "onfocus";
         private const string ON_FOCUS_SCRIPT = "javascript:this.select();";
         private const string PLACEHOLDER_BUTTON_FORMAT = "<button class=\"placeholderButton\" id=\"btn_{0}\" title=\"{1}\""
@@ -40,8 +39,8 @@ namespace PAE.WebUI.Controls
 
         public enum ExporterMode
         {
-            Username = 0,
-            AlbumLink = 1,
+            AlbumLink = 0,
+            Username = 1,
         }
 
         #endregion
@@ -50,8 +49,16 @@ namespace PAE.WebUI.Controls
 
         public ExporterMode Mode
         {
-            get;
-            set;
+            get
+            {
+                ExporterMode output = (ExporterMode)Enum.ToObject(typeof(ExporterMode), this.ViewState[Variables.ExporterModeViewStateName]);
+                return output;
+            }
+
+            set
+            {
+                this.ViewState[Variables.ExporterModeViewStateName] = value;
+            }
         }
 
         private IDictionary<string, string> Placeholders
@@ -94,6 +101,7 @@ namespace PAE.WebUI.Controls
                 this.WidthTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_WIDTH.ToString();
                 this.HeightTextBox.Text = AlbumExporter.DEFAULT_PREVIEW_HEIGHT.ToString();
 
+                this.Mode = ExporterMode.AlbumLink;
                 this.ConfigureExporterMode();
             }
 
@@ -102,6 +110,12 @@ namespace PAE.WebUI.Controls
 
             this.GetAlbumsErrorLabel.Text = string.Empty;
             this.ExportErrorLabel.Text = string.Empty;
+        }
+
+        protected void ExportModeMenu_MenuItemClick(object sender, MenuEventArgs e)
+        {
+            this.Mode = (ExporterMode)Enum.Parse(typeof(ExporterMode), e.Item.Value);
+            this.ConfigureExporterMode();
         }
 
         protected void IncludePrivateCheckBox_CheckedChanged(object sender, EventArgs e)
@@ -245,8 +259,8 @@ namespace PAE.WebUI.Controls
             {
                 case ExporterMode.AlbumLink:
 
-                    this.FullModePlaceHolder.Visible = false;
-                    this.ExpressModePlaceHolder.Visible = true;
+                    this.UsernameModePlaceHolder.Visible = false;
+                    this.AlbumLinkModePlaceHolder.Visible = true;
 
                     this.AlbumLinkTextBox.Focus();
 
@@ -254,8 +268,8 @@ namespace PAE.WebUI.Controls
 
                 default:
 
-                    this.FullModePlaceHolder.Visible = true;
-                    this.ExpressModePlaceHolder.Visible = false;
+                    this.UsernameModePlaceHolder.Visible = true;
+                    this.AlbumLinkModePlaceHolder.Visible = false;
 
                     this.IncludePrivateCheckBox.Checked = false;
                     this.IncludePrivateCheckBox.Text = Strings.IncludeUnlistedAlbumsUnchecked;

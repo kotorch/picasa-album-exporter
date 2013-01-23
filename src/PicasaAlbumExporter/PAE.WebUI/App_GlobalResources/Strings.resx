@@ -129,6 +129,12 @@
   <data name="By" xml:space="preserve">
     <value>&amp;nbsp;&amp;nbsp;x&amp;nbsp;&amp;nbsp;</value>
   </data>
+  <data name="ByAlbumLink" xml:space="preserve">
+    <value>By album link</value>
+  </data>
+  <data name="ByUsername" xml:space="preserve">
+    <value>By username</value>
+  </data>
   <data name="EditTemplate" xml:space="preserve">
     <value>Edit template...</value>
   </data>
@@ -147,14 +153,11 @@
   <data name="ExportFailed" xml:space="preserve">
     <value>Export failed</value>
   </data>
-  <data name="ExpressMode" xml:space="preserve">
-    <value>Express Mode</value>
+  <data name="ExportMode" xml:space="preserve">
+    <value>Export mode:</value>
   </data>
   <data name="FitImageWithin" xml:space="preserve">
     <value>Fit image within&amp;nbsp;&amp;nbsp;</value>
-  </data>
-  <data name="FullMode" xml:space="preserve">
-    <value>Full Site</value>
   </data>
   <data name="GetAlbums" xml:space="preserve">
     <value>Get Albums</value>
@@ -178,7 +181,7 @@
     <value>Open full-size</value>
   </data>
   <data name="PageTitle" xml:space="preserve">
-    <value>Picasa Web Album Exporter, Export Picasa Albums as HTML with Captions, Embed Picasa Album in Your Blog</value>
+    <value>Picasa Web Album Exporter, Share Picasa Albums as HTML with Captions, Publish Picasa Album in Your Blog</value>
   </data>
   <data name="Pixels" xml:space="preserve">
     <value>&amp;nbsp;&amp;nbsp;pixels</value>
@@ -224,9 +227,6 @@
   </data>
   <data name="SiteFeature1" xml:space="preserve">
     <value>Export Picasa web albums as &lt;b&gt;HTML&lt;/b&gt;, &lt;b&gt;XML&lt;/b&gt;, &lt;b&gt;BBCode&lt;/b&gt;, etc.</value>
-  </data>
-  <data name="SiteFeature10" xml:space="preserve">
-    <value>Try &lt;a href="exp"&gt;Express Mode&lt;/a&gt; to &lt;b&gt;export album by URL&lt;/b&gt;</value>
   </data>
   <data name="SiteFeature2" xml:space="preserve">
     <value>Export &lt;b&gt;unlisted albums&lt;/b&gt; (with a password)</value>

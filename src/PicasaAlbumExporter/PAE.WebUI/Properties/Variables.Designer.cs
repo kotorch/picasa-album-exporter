@@ -61,6 +61,15 @@ namespace PAE.WebUI.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ExporterMode.
+        /// </summary>
+        public static string ExporterModeViewStateName {
+            get {
+                return ResourceManager.GetString("ExporterModeViewStateName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ln.
         /// </summary>
         public static string LanguageQueryStringName {

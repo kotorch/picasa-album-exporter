@@ -50,9 +50,6 @@ namespace PAE.WebUI
 
 		private static void RegisterRoutes(RouteCollection routeCollection)
 		{
-            Route expressRoute = new Route(ExpressModeRouteHandler.URL, new ExpressModeRouteHandler());
-            routeCollection.Add(ExpressModeRouteHandler.ROUTE_NAME, expressRoute);
-
             Route previewRoute = new Route(PreviewRouteHandler.URL, new PreviewRouteHandler());
             routeCollection.Add(PreviewRouteHandler.ROUTE_NAME, previewRoute);
 
