@@ -136,7 +136,7 @@
     <value>By username</value>
   </data>
   <data name="EditTemplate" xml:space="preserve">
-    <value>Edit template...</value>
+    <value>Edit template</value>
   </data>
   <data name="EmbedCode" xml:space="preserve">
     <value>Embed code:</value>
