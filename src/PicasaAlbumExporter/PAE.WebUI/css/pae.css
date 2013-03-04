@@ -86,6 +86,17 @@
 	width: 610px;
 }
 
+.editorToggler
+{
+	text-decoration: none;
+	border-bottom: 1px dashed;
+}
+
+.editorToggler:hover
+{
+	text-decoration: none !important;
+}
+
 .templateEditorShow
 {
 	display: block;
