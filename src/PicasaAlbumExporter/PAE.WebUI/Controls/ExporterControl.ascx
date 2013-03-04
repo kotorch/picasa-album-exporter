@@ -56,8 +56,8 @@
 		    <tr>
 			    <td></td>
 			    <td>
-				    <asp:LinkButton ID="ToggleEditorLink" runat="server" Text="<%$ Resources : Strings, EditTemplate %>"
-					    OnClick="ToggleEditorLink_Click" />
+				    <asp:LinkButton ID="ToggleEditorLink" runat="server" CssClass="editorToggler" 
+					    Text="<%$ Resources : Strings, EditTemplate %>" OnClick="ToggleEditorLink_Click" />
 				    <asp:Panel ID="TemplateEditorPanel" runat="server">
 					    <asp:TextBox ID="TemplateTextBox" runat="server" CssClass="paeTextArea"
 						    TextMode="MultiLine"></asp:TextBox>
