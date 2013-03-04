@@ -136,7 +136,7 @@
     <value>По имени аккаунта</value>
   </data>
   <data name="EditTemplate" xml:space="preserve">
-    <value>Редактировать шаблон...</value>
+    <value>Редактировать шаблон</value>
   </data>
   <data name="EmbedCode" xml:space="preserve">
     <value>Код для вставки:</value>
