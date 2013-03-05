@@ -247,7 +247,7 @@
     <value>Посмотрите, &lt;b&gt;как будет выглядеть&lt;/b&gt; полученный HTML-код</value>
   </data>
   <data name="SiteFeature8" xml:space="preserve">
-    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Сообщите разработчику&lt;/a&gt; о проблеме или &lt;b&gt;недостающей функциональности&lt;/b&gt;</value>
+    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Свяжитесь с автором&lt;/a&gt;</value>
   </data>
   <data name="SiteFeature9" xml:space="preserve">
     <value>Распространите информацию:&amp;nbsp;</value>
