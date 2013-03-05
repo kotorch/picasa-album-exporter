@@ -247,7 +247,7 @@
     <value>Instantly &lt;b&gt;preview&lt;/b&gt; exported HTML</value>
   </data>
   <data name="SiteFeature8" xml:space="preserve">
-    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Contact developer&lt;/a&gt; to report problem or &lt;b&gt;request new feature&lt;/b&gt;</value>
+    <value>&lt;a href="mailto:dusiadev@gmail.com?Subject=[PAE]"&gt;Contact developer&lt;/a&gt;</value>
   </data>
   <data name="SiteFeature9" xml:space="preserve">
     <value>Spread the word:&amp;nbsp;</value>
