@@ -448,7 +448,7 @@ namespace Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to &lt;a href=&quot;mailto:dusiadev@gmail.com?Subject=[PAE]&quot;&gt;Contact developer&lt;/a&gt; to report problem or &lt;b&gt;request new feature&lt;/b&gt;.
+        ///   Looks up a localized string similar to &lt;a href=&quot;mailto:dusiadev@gmail.com?Subject=[PAE]&quot;&gt;Contact developer&lt;/a&gt;.
         /// </summary>
         internal static string SiteFeature8 {
             get {
