@@ -26,8 +26,8 @@ namespace PAE.Logic
 
 		#region Constants
 
-		public const int DEFAULT_PREVIEW_WIDTH = 800;
-		public const int DEFAULT_PREVIEW_HEIGHT = 600;
+		public const int DEFAULT_PREVIEW_WIDTH = 1024;
+		public const int DEFAULT_PREVIEW_HEIGHT = 768;
 		
 		private const string FORWARD_SLASH = @"/";
 		private const string SIZE_PREFIX = FORWARD_SLASH + "s";
@@ -40,9 +40,9 @@ namespace PAE.Logic
 		private const string HTML_BREAK = "<br />";
 		private const string CONTENT_VIDEO = "video";
 		private const string DEFAULT_TEMPLATE_FORMAT = "<p><a name=\"" + Placeholders.COUNTER + "\">" + Placeholders.COUNTER + "</a>. " + Placeholders.CAPTION
-													+ "</p><p><a href=\"" + Placeholders.ORIGINAL + "\" title=\"{0}\"><img src=\""
-													+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:1px solid gray;\" /></a>"
-													+ "<br /><sub><i><a href=\"" + Placeholders.PICASA_URL + "\">{1}</a></i></sub></p>";
+													+ "</p><p><a href=\"" + Placeholders.PICASA_URL + "\" title=\"{0}\"><img src=\""
+													+ Placeholders.IMAGE + "\" alt=\"[picasa-web]\" style=\"border:2px solid black;\" /></a>"
+													+ "<br /><sub><i><a href=\"" + Placeholders.ORIGINAL + "\">{1}</a></i></sub></p>";
 
 		#endregion
 
@@ -80,7 +80,7 @@ namespace PAE.Logic
 
 		public static string GetDefaultTemplate(string openFullSize, string viewOnPicasa)
 		{
-			string output = string.Format(DEFAULT_TEMPLATE_FORMAT, openFullSize, viewOnPicasa);
+			string output = string.Format(DEFAULT_TEMPLATE_FORMAT, viewOnPicasa, openFullSize);
 			return output;
 		}
 
